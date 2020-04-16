@@ -18,7 +18,7 @@
 
             <Border BorderThickness="1" BorderBrush="Black"/>
 
-            <Grid Margin="10,10,10,350" Background="{StaticResource ThemeColor1}" >
+            <Grid Margin="5,10,10,350" Background="{StaticResource ThemeColor1}" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
                     <RowDefinition Height="1*"/>
@@ -27,34 +27,64 @@
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
 
-                <StackPanel Grid.Row="0" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" Background="{StaticResource ThemeColor0}">
-                    <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="10,0,0,0" Text="Type of Loading" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="155" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged"/>
-                    <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="10,0,0,0" Text="Location" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="155" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged"/>
-                    <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="10,0,0,0" Text="Magnitude" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="155" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged"/>
+                <StackPanel Grid.Row="0" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal">
+                    <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor0}">
+                        <TextBlock Foreground="White" Text="Type of Loading" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged"/>
+                    </Border>
+                    <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor0}">
+                        <TextBlock Foreground="White" Text="Location" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged"/>
+                    </Border>
+                    <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor0}">
+                        <TextBlock Foreground="White" Text="Magnitude" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged"/>
+                    </Border>
                 </StackPanel>
 
-                <StackPanel Grid.Row="1" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" Background="{StaticResource ThemeColor2}">
-                    <TextBlock Foreground="Black" HorizontalAlignment="Left" Margin="10,0,0,0" Text="Point Loading" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="155" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged"/>
-                    <TextBox Height="60" Width="155" Margin="10,0,0,0"/>
-                    <TextBox Height="60" Width="155" Margin="10,0,0,0"/>
+                <StackPanel Grid.Row="1" Margin="10,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" >
+                    <Border HorizontalAlignment="Left" VerticalAlignment="Center" Height="60" Width="155" Background="{StaticResource ThemeColor2}">
+                        <TextBlock Foreground="Black" Text="Point Loading" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged"/>
+                    </Border>
+                    <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
+                        <TextBox/>
+                    </Border>
+                    <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
+                        <TextBox/>
+                    </Border>
                 </StackPanel>
 
-                <StackPanel Grid.Row="2" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" Background="{StaticResource ThemeColor3}">
-                    <TextBlock Foreground="Black" HorizontalAlignment="Left" Margin="10,0,0,0" Text="Triangular&#10;Distributed Loading" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="155" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged"/>
-                    <TextBox Height="60" Width="155" Margin="10,0,0,0"/>
-                    <TextBox Height="60" Width="155" Margin="10,0,0,0"/>
+                <StackPanel Grid.Row="2" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" >
+                    <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor3}">
+                        <TextBlock Foreground="Black" Text="Triangular&#xA;Distributed Loading" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged"/>
+                    </Border>
+                    <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
+                        <TextBox/>
+                    </Border>
+                    <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
+                        <TextBox/>
+                    </Border>
                 </StackPanel>
 
-                <StackPanel Grid.Row="3" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" Background="{StaticResource ThemeColor2}">
-                    <TextBlock Foreground="Black" HorizontalAlignment="Left" Margin="10,0,0,0" Text="Rectangular &#10;Distributed Loading" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="155" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged"/>
-                    <TextBox Height="60" Width="155" Margin="10,0,0,0"/>
-                    <TextBox Height="60" Width="155" Margin="10,0,0,0"/>
+                <StackPanel Grid.Row="3" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" >
+                    <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor2}">
+                        <TextBlock Foreground="Black" Text="Rectangular &#xA;Distributed Loading" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged"/>
+                    </Border>
+                    <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
+                        <TextBox/>
+                    </Border>
+                    <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
+                        <TextBox/>
+                    </Border>
                 </StackPanel>
 
-                <StackPanel Grid.Row="4" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" Background="{StaticResource ThemeColor3}">
-                    <TextBlock Foreground="Black" HorizontalAlignment="Left" Margin="10,0,0,0" Text="Free Moment" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="155" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged"/>
-                    <TextBox Height="60" Width="155" Margin="10,0,0,0"/>
-                    <TextBox Height="60" Width="155" Margin="10,0,0,0"/>
+                <StackPanel Grid.Row="4" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" >
+                    <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor3}">
+                        <TextBlock Foreground="Black" Text="Free Moment" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged"/>
+                    </Border>
+                    <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
+                        <TextBox/>
+                    </Border>
+                    <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
+                        <TextBox/>
+                    </Border>
                 </StackPanel>
 
 
@@ -71,24 +101,40 @@
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
 
-                <StackPanel Grid.Row="0" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" Background="{StaticResource ThemeColor0}">
-                    <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="10,0,0,0" Text="Type of Support" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="155" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged"/>
-                    <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="10,0,0,0" Text="Location" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="155" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged"/>
+                <StackPanel Grid.Row="0" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal">
+                    <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor0}">
+                        <TextBlock Foreground="White" Text="Type of Support" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged"/>
+                    </Border>
+                    <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor0}">
+                        <TextBlock Foreground="White" Text="Location" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged"/>
+                    </Border>
                 </StackPanel>
 
-                <StackPanel Grid.Row="1" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" Background="{StaticResource ThemeColor2}">
-                    <TextBlock Foreground="Black" HorizontalAlignment="Left" Margin="10,0,0,0" Text="Pin Support" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="155" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged"/>
-                    <TextBox Height="60" Width="155" Margin="10,0,0,0"/>
+                <StackPanel Grid.Row="1" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" >
+                    <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor2}">
+                        <TextBlock Foreground="Black" Text="Pin Support" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged"/>
+                    </Border>
+                    <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
+                        <TextBox/>
+                    </Border>
                 </StackPanel>
 
-                <StackPanel Grid.Row="2" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" Background="{StaticResource ThemeColor3}">
-                    <TextBlock Foreground="Black" HorizontalAlignment="Left" Margin="10,0,0,0" Text="Roller Support" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="155" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged"/>
-                    <TextBox Height="60" Width="155" Margin="10,0,0,0"/>
+                <StackPanel Grid.Row="2" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" >
+                    <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor3}">
+                        <TextBlock Foreground="Black" Text="Roller Support" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged"/>
+                    </Border>
+                    <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
+                        <TextBox/>
+                    </Border>
                 </StackPanel>
 
-                <StackPanel Grid.Row="3" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" Background="{StaticResource ThemeColor2}">
-                    <TextBlock Foreground="Black" HorizontalAlignment="Left" Margin="10,0,0,0" Text="Fixed Support" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="155" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged"/>
-                    <TextBox Height="60" Width="155" Margin="10,0,0,0"/>
+                <StackPanel Grid.Row="3" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" >
+                    <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor2}">
+                        <TextBlock Foreground="Black" Text="Fixed Support" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged"/>
+                    </Border>
+                    <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
+                        <TextBox/>
+                    </Border>
                 </StackPanel>
             </Grid>
 
