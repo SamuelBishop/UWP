@@ -14,11 +14,11 @@
 
     <Grid Margin="80,80,80,80" Background="{StaticResource ThemeColor0}">
         <Border BorderThickness="1" BorderBrush="Black"/>
-        <Grid Margin="55,55,700,55" Background="{StaticResource ThemeColor1}" >
+        <Grid Margin="55,55,700,55" Background="{StaticResource ThemeColor1}" Width="585">
 
             <Border BorderThickness="1" BorderBrush="Black"/>
 
-            <Grid Margin="5,10,10,350" Background="{StaticResource ThemeColor1}" >
+            <Grid Margin="5,10,10,350" Background="{StaticResource ThemeColor1}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
                     <RowDefinition Height="1*"/>
@@ -29,69 +29,66 @@
 
                 <StackPanel Grid.Row="0" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal">
                     <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor0}">
-                        <TextBlock x:ConnectionId='14' Foreground="White" Text="Type of Loading" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                              />
+                        <TextBlock x:ConnectionId='14' Foreground="White" Text="Type of Loading" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                     </Border>
                     <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor0}">
-                        <TextBlock x:ConnectionId='13' Foreground="White" Text="Location" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                              />
+                        <TextBlock x:ConnectionId='13' Foreground="White" Text="Location" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                     </Border>
                     <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor0}">
-                        <TextBlock x:ConnectionId='12' Foreground="White" Text="Magnitude" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                              />
+                        <TextBlock x:ConnectionId='12' Foreground="White" Text="Magnitude" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                     </Border>
                 </StackPanel>
 
                 <StackPanel Grid.Row="1" Margin="10,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" >
                     <Border HorizontalAlignment="Left" VerticalAlignment="Center" Height="60" Width="155" Background="{StaticResource ThemeColor2}">
-                        <TextBlock x:ConnectionId='11' Foreground="Black" Text="Point Loading" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                              />
+                        <TextBlock x:ConnectionId='11' Foreground="Black" Text="Point Loading" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                     </Border>
                     <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
-                        <TextBox/>
+                        <TextBox FontSize="16"/>
                     </Border>
                     <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
-                        <TextBox/>
+                        <TextBox FontSize="16"/>
                     </Border>
                 </StackPanel>
 
                 <StackPanel Grid.Row="2" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" >
                     <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor3}">
-                        <TextBlock x:ConnectionId='10' Foreground="Black" Text="Triangular&#xA;Distributed Loading" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                              />
+                        <TextBlock x:ConnectionId='10' Foreground="Black" Text="Triangular&#xA;Distributed Loading" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                     </Border>
                     <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
-                        <TextBox/>
+                        <TextBox FontSize="16"/>
                     </Border>
                     <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
-                        <TextBox/>
+                        <TextBox FontSize="16"/>
                     </Border>
                 </StackPanel>
 
                 <StackPanel Grid.Row="3" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" >
                     <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor2}">
-                        <TextBlock x:ConnectionId='9' Foreground="Black" Text="Rectangular &#xA;Distributed Loading" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                              />
+                        <TextBlock x:ConnectionId='9' Foreground="Black" Text="Rectangular &#xA;Distributed Loading" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                     </Border>
                     <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
-                        <TextBox/>
+                        <TextBox FontSize="16"/>
                     </Border>
                     <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
-                        <TextBox/>
+                        <TextBox FontSize="16"/>
                     </Border>
                 </StackPanel>
 
                 <StackPanel Grid.Row="4" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" >
                     <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor3}">
-                        <TextBlock x:ConnectionId='8' Foreground="Black" Text="Free Moment" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                              />
+                        <TextBlock x:ConnectionId='8' Foreground="Black" Text="Free Moment" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                     </Border>
                     <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
-                        <TextBox/>
+                        <TextBox FontSize="16"/>
                     </Border>
                     <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
-                        <TextBox/>
+                        <TextBox FontSize="16"/>
                     </Border>
                 </StackPanel>
-
-
-
-
-
             </Grid>
+            
+            
 
             <Grid Margin="10,425,10,10" Background="{StaticResource ThemeColor1}" >
                 <Grid.RowDefinitions>
@@ -103,43 +100,45 @@
 
                 <StackPanel Grid.Row="0" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal">
                     <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor0}">
-                        <TextBlock x:ConnectionId='7' Foreground="White" Text="Type of Support" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                              />
+                        <TextBlock x:ConnectionId='7' Foreground="White" Text="Type of Support" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                     </Border>
                     <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor0}">
-                        <TextBlock x:ConnectionId='6' Foreground="White" Text="Location" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                              />
+                        <TextBlock x:ConnectionId='6' Foreground="White" Text="Location" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                     </Border>
                 </StackPanel>
 
                 <StackPanel Grid.Row="1" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" >
                     <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor2}">
-                        <TextBlock x:ConnectionId='5' Foreground="Black" Text="Pin Support" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                              />
+                        <TextBlock x:ConnectionId='5' Foreground="Black" Text="Pin Support" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                     </Border>
                     <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
-                        <TextBox/>
+                        <TextBox FontSize="16"/>
                     </Border>
                 </StackPanel>
 
                 <StackPanel Grid.Row="2" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" >
                     <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor3}">
-                        <TextBlock x:ConnectionId='4' Foreground="Black" Text="Roller Support" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                              />
+                        <TextBlock x:ConnectionId='4' Foreground="Black" Text="Roller Support" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                     </Border>
                     <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
-                        <TextBox/>
+                        <TextBox FontSize="16"/>
                     </Border>
                 </StackPanel>
 
                 <StackPanel Grid.Row="3" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" >
                     <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor2}">
-                        <TextBlock x:ConnectionId='3' Foreground="Black" Text="Fixed Support" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                              />
+                        <TextBlock x:ConnectionId='3' Foreground="Black" Text="Fixed Support" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                     </Border>
                     <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
-                        <TextBox/>
+                        <TextBox FontSize="16"/>
                     </Border>
                 </StackPanel>
             </Grid>
 
         </Grid>
-        <TextBlock x:ConnectionId='2' Foreground="White" HorizontalAlignment="Left" Margin="55,790,0,0" Text="Length of Beam:" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="300" RenderTransformOrigin="0.486,0.466"                                               FontSize="24" />
+        
+        <TextBlock x:ConnectionId='2' Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="55,0,0,0" Text="Length of Beam:" TextWrapping="NoWrap" Height="60" Width="300" RenderTransformOrigin="0.486,0.466"                                               FontSize="24" />
+    
     </Grid>
 </Page>
 
