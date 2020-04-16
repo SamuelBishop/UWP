@@ -12,36 +12,88 @@
 
 
 
-    <Grid Margin="80,80,80,80" Background="{StaticResource ThemeColor1}">
-        <Grid Margin="55,55,700,55" Background="{StaticResource ThemeColor2}">
+    <Grid Margin="80,80,80,80" Background="{StaticResource ThemeColor0}">
+        <Border BorderThickness="1" BorderBrush="Black"/>
+        <Grid Margin="55,55,700,55" Background="{StaticResource ThemeColor1}" >
 
             <Border BorderThickness="1" BorderBrush="Black"/>
-            
-            <Border Background="Red">
-                <TextBlock x:ConnectionId='14' HorizontalAlignment="Left" Margin="10,10,0,0" Text="Type of Loading" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="132" RenderTransformOrigin="0.486,0.466"                                              />
-            </Border>
-            
-            <TextBlock x:ConnectionId='3' HorizontalAlignment="Left" Margin="154,10,0,0" Text="Location" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="119" RenderTransformOrigin="0.486,0.466"                                              />
-            <TextBlock x:ConnectionId='4' HorizontalAlignment="Left" Margin="283,10,0,0" Text="Magnitude" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="138" RenderTransformOrigin="0.486,0.466"                                              />
+
+            <Grid Margin="10,10,10,350" Background="{StaticResource ThemeColor1}" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" Background="{StaticResource ThemeColor0}">
+                    <TextBlock x:ConnectionId='12' Foreground="White" HorizontalAlignment="Left" Margin="10,0,0,0" Text="Type of Loading" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="155" RenderTransformOrigin="0.486,0.466"                                              />
+                    <TextBlock x:ConnectionId='13' Foreground="White" HorizontalAlignment="Left" Margin="10,0,0,0" Text="Location" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="155" RenderTransformOrigin="0.486,0.466"                                              />
+                    <TextBlock x:ConnectionId='14' Foreground="White" HorizontalAlignment="Left" Margin="10,0,0,0" Text="Magnitude" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="155" RenderTransformOrigin="0.486,0.466"                                              />
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" Background="{StaticResource ThemeColor2}">
+                    <TextBlock x:ConnectionId='11' Foreground="Black" HorizontalAlignment="Left" Margin="10,0,0,0" Text="Point Loading" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="155" RenderTransformOrigin="0.486,0.466"                                              />
+                    <TextBox Height="60" Width="155" Margin="10,0,0,0"/>
+                    <TextBox Height="60" Width="155" Margin="10,0,0,0"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="2" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" Background="{StaticResource ThemeColor3}">
+                    <TextBlock x:ConnectionId='10' Foreground="Black" HorizontalAlignment="Left" Margin="10,0,0,0" Text="Triangular&#10;Distributed Loading" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="155" RenderTransformOrigin="0.486,0.466"                                              />
+                    <TextBox Height="60" Width="155" Margin="10,0,0,0"/>
+                    <TextBox Height="60" Width="155" Margin="10,0,0,0"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="3" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" Background="{StaticResource ThemeColor2}">
+                    <TextBlock x:ConnectionId='9' Foreground="Black" HorizontalAlignment="Left" Margin="10,0,0,0" Text="Rectangular &#10;Distributed Loading" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="155" RenderTransformOrigin="0.486,0.466"                                              />
+                    <TextBox Height="60" Width="155" Margin="10,0,0,0"/>
+                    <TextBox Height="60" Width="155" Margin="10,0,0,0"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="4" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" Background="{StaticResource ThemeColor3}">
+                    <TextBlock x:ConnectionId='8' Foreground="Black" HorizontalAlignment="Left" Margin="10,0,0,0" Text="Free Moment" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="155" RenderTransformOrigin="0.486,0.466"                                              />
+                    <TextBox Height="60" Width="155" Margin="10,0,0,0"/>
+                    <TextBox Height="60" Width="155" Margin="10,0,0,0"/>
+                </StackPanel>
 
 
-            <TextBlock x:ConnectionId='5' HorizontalAlignment="Left" Margin="10,73,0,0" Text="Point Loading" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="138" RenderTransformOrigin="0.486,0.466"                                              />
-            <TextBlock x:ConnectionId='6' HorizontalAlignment="Left" Margin="10,136,0,0" Text="Triangular Distributed Loading" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="138" RenderTransformOrigin="0.486,0.466"                                              />
-            <TextBlock x:ConnectionId='7' HorizontalAlignment="Left" Margin="10,199,0,0" Text="Rectangular Distributed Loading" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="138" RenderTransformOrigin="0.486,0.466"                                              />
-            <TextBlock x:ConnectionId='8' HorizontalAlignment="Left" Margin="10,262,0,0" Text="Free Moment" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="138" RenderTransformOrigin="0.486,0.466"                                              />
 
-            <TextBlock x:ConnectionId='9' HorizontalAlignment="Left" Margin="10,370,0,0" Text="Type of Support" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="138" RenderTransformOrigin="0.486,0.466"                                              />
-            <TextBlock x:ConnectionId='10' HorizontalAlignment="Left" Margin="154,370,0,0" Text="Location" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="138" RenderTransformOrigin="0.486,0.466"                                              />
 
-            <TextBlock x:ConnectionId='11' HorizontalAlignment="Left" Margin="10,433,0,0" Text="Pin Support" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="138" RenderTransformOrigin="0.486,0.466"                                              />
-            <TextBlock x:ConnectionId='12' HorizontalAlignment="Left" Margin="10,496,0,0" Text="Roller Support" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="138" RenderTransformOrigin="0.486,0.466"                                              />
-            <TextBlock x:ConnectionId='13' HorizontalAlignment="Left" Margin="10,559,0,0" Text="Fixed Support" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="138" RenderTransformOrigin="0.486,0.466"                                              />
 
-            <Border BorderThickness="1" BorderBrush="Black"/>
+            </Grid>
+
+            <Grid Margin="10,425,10,10" Background="{StaticResource ThemeColor1}" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" Background="{StaticResource ThemeColor0}">
+                    <TextBlock x:ConnectionId='6' Foreground="White" HorizontalAlignment="Left" Margin="10,0,0,0" Text="Type of Support" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="155" RenderTransformOrigin="0.486,0.466"                                              />
+                    <TextBlock x:ConnectionId='7' Foreground="White" HorizontalAlignment="Left" Margin="10,0,0,0" Text="Location" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="155" RenderTransformOrigin="0.486,0.466"                                              />
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" Background="{StaticResource ThemeColor2}">
+                    <TextBlock x:ConnectionId='5' Foreground="Black" HorizontalAlignment="Left" Margin="10,0,0,0" Text="Pin Support" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="155" RenderTransformOrigin="0.486,0.466"                                              />
+                    <TextBox Height="60" Width="155" Margin="10,0,0,0"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="2" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" Background="{StaticResource ThemeColor3}">
+                    <TextBlock x:ConnectionId='4' Foreground="Black" HorizontalAlignment="Left" Margin="10,0,0,0" Text="Roller Support" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="155" RenderTransformOrigin="0.486,0.466"                                              />
+                    <TextBox Height="60" Width="155" Margin="10,0,0,0"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="3" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" Background="{StaticResource ThemeColor2}">
+                    <TextBlock x:ConnectionId='3' Foreground="Black" HorizontalAlignment="Left" Margin="10,0,0,0" Text="Fixed Support" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="155" RenderTransformOrigin="0.486,0.466"                                              />
+                    <TextBox Height="60" Width="155" Margin="10,0,0,0"/>
+                </StackPanel>
+            </Grid>
 
         </Grid>
-        <TextBlock x:ConnectionId='2' HorizontalAlignment="Left" Margin="55,790,0,0" Text="Length of Beam:" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="300" RenderTransformOrigin="0.486,0.466"                                               FontSize="24" Foreground="Red"/>
-        <Border BorderThickness="1" BorderBrush="Black"/>
+        <TextBlock x:ConnectionId='2' Foreground="White" HorizontalAlignment="Left" Margin="55,790,0,0" Text="Length of Beam:" TextWrapping="NoWrap" VerticalAlignment="Top" Height="60" Width="300" RenderTransformOrigin="0.486,0.466"                                               FontSize="24" />
     </Grid>
 </Page>
 

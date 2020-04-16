@@ -7,9 +7,14 @@
     xmlns:System="using:System">
 
     <Application.Resources>
-        <SolidColorBrush x:Key="BackgroundColor" Color="RoyalBlue" />
-        <SolidColorBrush x:Key="ThemeColor1" Color="LightGray" />
-        <SolidColorBrush x:Key="ThemeColor2" Color="RoyalBlue" />
+        <SolidColorBrush x:Key="BackgroundColor" Color="White" />
+        <SolidColorBrush x:Key="ThemeColor0" Color="#5D9BD7" />
+        <SolidColorBrush x:Key="ThemeColor1" Color="White" />
+        <SolidColorBrush x:Key="ThemeColor2" Color="#D4DEF0" />
+        <SolidColorBrush x:Key="ThemeColor3" Color="#ECEEF8" />
+        
+        <SolidColorBrush x:Key="Test1" Color="Black" />
+        <SolidColorBrush x:Key="Test2" Color="Orange" />
 
         <System:Int32 x:Key="LeftMargin">10</System:Int32>
         
