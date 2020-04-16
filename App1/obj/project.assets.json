@@ -8158,9 +8158,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sjbc3\\OneDrive\\Desktop\\git\\UWP\\App1\\App1.csproj",
-      "projectName": "App1",
-      "projectPath": "C:\\Users\\sjbc3\\OneDrive\\Desktop\\git\\UWP\\App1\\App1.csproj",
+      "projectUniqueName": "C:\\Users\\sjbc3\\OneDrive\\Desktop\\git\\UWP\\App1\\InternalForcesCalculator.csproj",
+      "projectName": "InternalForcesCalculator",
+      "projectPath": "C:\\Users\\sjbc3\\OneDrive\\Desktop\\git\\UWP\\App1\\InternalForcesCalculator.csproj",
       "packagesPath": "C:\\Users\\sjbc3\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\sjbc3\\OneDrive\\Desktop\\git\\UWP\\App1\\obj\\",
       "projectStyle": "PackageReference",

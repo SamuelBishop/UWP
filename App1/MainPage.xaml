@@ -1,14 +1,14 @@
 ﻿<Page
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:App1"
+    xmlns:local="using:InternalForcesCalculator"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:System="using:System" xmlns:Custom="using:C1.Xaml.FlexGrid"
     xmlns:Custom1="using:C1.Xaml.Chart"
     xmlns:Custom2="using:C1.Xaml.Chart.Finance"
     xmlns:Custom3="using:Syncfusion.UI.Xaml.Charts"
-    x:Class="App1.MainPage"
+    x:Class="InternalForcesCalculator.MainPage"
     mc:Ignorable="d"
     Background="{ThemeResource BackgroundColor}"
     >
