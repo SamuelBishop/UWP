@@ -17,10 +17,8 @@ namespace InternalForcesCalculator.ViewModel
             ShearForceData = new List<ShearForce>()
             {
                 new ShearForce { XCoord = 0, YCoord = 7 },
-                new ShearForce { XCoord = 1, YCoord = 7 },
-                new ShearForce { XCoord = 1.01F, YCoord = -5 },
-                new ShearForce { XCoord = 4, YCoord = -5 },
-                new ShearForce { XCoord = 4.01F, YCoord = 8 },
+                new ShearForce { XCoord = 1, YCoord = -5 },
+                new ShearForce { XCoord = 4, YCoord = 8 },
                 new ShearForce { XCoord = 5, YCoord = 8 }
             };
 

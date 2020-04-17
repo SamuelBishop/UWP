@@ -20,8 +20,9 @@
         <VM:ViewModel/>
     </Page.DataContext>
 
-
     <Grid Margin="80,80,80,80" Background="{StaticResource ThemeColor0}">
+        <Border BorderThickness="1" BorderBrush="Black"/>
+
         <Grid Margin="55,55,700,55" Background="{StaticResource ThemeColor1}">
             <Border BorderThickness="1" BorderBrush="Black"/>
 
@@ -95,8 +96,6 @@
                 </StackPanel>
             </Grid>
 
-
-
             <Grid Margin="10,425,10,10" Background="{StaticResource ThemeColor1}" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
@@ -146,75 +145,86 @@
 
         <TextBlock x:ConnectionId='2' Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="55,0,0,0" Text="Length of Beam:" TextWrapping="NoWrap" Height="60" Width="300" RenderTransformOrigin="0.486,0.466"                                               FontSize="24" />
 
-        <!--Background="{StaticResource Test1}"
-        AreaBackground="{StaticResource Test1}"
-        Interior="#bcbcbc"-->
-        
-        <Grid Margin="700,55,55,430" Background="{StaticResource ThemeColor1}" >
+        <!--For Trackball Implementation
+        <syncfusion:SfChart.Behaviors>
+            <syncfusion:ChartTrackBallBehavior>
+            </syncfusion:ChartTrackBallBehavior>
+        </syncfusion:SfChart.Behaviors>-->
+
+        <Grid Margin="700,55,55,430" Background="White" >
             <Border BorderThickness="1" BorderBrush="Black">
                 <syncfusion:SfChart
                     Header="Shear Force Diagram"
-                    
                     Palette="Custom"
-                    FontSize="20" 
-                    
-                    Foreground="{StaticResource Test1}"
-                    Background="{StaticResource ThemeColor1}"
-
+                    FontSize="20"
+                    Foreground="Black"
+                    Background="White"
                     HorizontalAlignment="Left" 
                     VerticalAlignment="Bottom" 
                     Margin="6,0,0,4"
                     Width="550" 
                     Height="330"
-                    
                     AreaBorderBrush="Gray" 
                     AreaBorderThickness="2"
                     Visibility="Visible"
                     >
+
+                    <syncfusion:SfChart.Resources>
+                        <Style x:Key="majorGridLineStyle" TargetType="Line">
+                            <Setter Property="Stroke" Value="Gray"/>
+                            <Setter Property="StrokeThickness" Value="1"/>
+                        </Style>
+                        <Style x:Key="minorGridLineStyle" TargetType="Line">
+                            <Setter Property="Stroke" Value="Gray"/>
+                            <Setter Property="StrokeThickness" Value="1"/>
+                        </Style>
+                    </syncfusion:SfChart.Resources>
+
                     <syncfusion:SfChart.PrimaryAxis>
-                        <syncfusion:CategoryAxis Foreground="{StaticResource Test1}" Header="Distance (M)" FontSize="14" HorizontalAlignment="Center"/>
+                        <syncfusion:CategoryAxis 
+                            Header="Distance (M)" 
+                            FontSize="14" 
+                            Foreground="Black"
+                            HorizontalAlignment="Center" 
+                            ShowGridLines="True"
+                            LabelsPosition="Outside"
+                            MajorGridLineStyle="{StaticResource majorGridLineStyle }"
+                            MinorGridLineStyle="{StaticResource minorGridLineStyle}"
+                            />
                     </syncfusion:SfChart.PrimaryAxis>
+
                     <syncfusion:SfChart.SecondaryAxis>
-                        <syncfusion:NumericalAxis Foreground="{StaticResource Test1}" Header="Force (kN)" FontSize="14" HorizontalAlignment="Center"/>
+                        <syncfusion:NumericalAxis 
+                            Header="Force (kN)" 
+                            FontSize="14"
+                            Foreground="Black"
+                            HorizontalAlignment="Center" 
+                            ShowGridLines="True"
+                            LabelsPosition="Outside"
+                            MajorGridLineStyle="{StaticResource majorGridLineStyle }"
+                            MinorGridLineStyle="{StaticResource minorGridLineStyle}"
+                            />
                     </syncfusion:SfChart.SecondaryAxis>
 
-                    <syncfusion:AreaSeries>
-                        <syncfusion:AreaSeries.AdornmentsInfo>
+                    <syncfusion:StepAreaSeries>
+                        <syncfusion:StepAreaSeries.AdornmentsInfo>
                             <syncfusion:ChartAdornmentInfo ShowLabel="True" LabelPosition="Auto"/>
-                        </syncfusion:AreaSeries.AdornmentsInfo>
-                    </syncfusion:AreaSeries>
+                        </syncfusion:StepAreaSeries.AdornmentsInfo>
+                    </syncfusion:StepAreaSeries>
 
-
-                    <syncfusion:AreaSeries  Label="Bending Moment Diagram" ItemsSource="{Binding ShearForceData}" XBindingPath="XCoord" YBindingPath="YCoord" />
-
-
-                    <syncfusion:SfChart.ColorModel>
-                        <syncfusion:ChartColorModel>
-                            <syncfusion:ChartColorModel.CustomBrushes>
-                                <SolidColorBrush Color="BlueViolet"/>
-                                <SolidColorBrush Color="#5D9BD7"/>
-                                <SolidColorBrush Color="Purple"/>
-                            </syncfusion:ChartColorModel.CustomBrushes>
-                        </syncfusion:ChartColorModel>
-                    </syncfusion:SfChart.ColorModel>
+                    <syncfusion:StepAreaSeries ShowTooltip="True" Interior="#5D9BD7" Label="Bending Moment Diagram" ItemsSource="{Binding ShearForceData}" XBindingPath="XCoord" YBindingPath="YCoord" />
 
                 </syncfusion:SfChart>
-
-
             </Border>
         </Grid>
 
-        <Grid Margin="700,430,55,55" Background="{StaticResource ThemeColor1}" >
+        <Grid Margin="700,430,55,55" Background="White">
             <Border BorderThickness="1" BorderBrush="Black">
                 <syncfusion:SfChart 
-                    Header="Bending Moment Diagram" 
+                    Header="Bending Moment Diagram"
+                    Foreground="Black"
                     Palette="Custom"
-                    
-                    Foreground="{StaticResource Test1}"
-                    Background="{StaticResource ThemeColor1}"
-                    
-                    
-                    
+                    Background="White"
                     FontSize="20" HorizontalAlignment="Left" 
                     VerticalAlignment="Bottom" Margin="6,0,0,4" 
                     Width="550" 
@@ -223,11 +233,42 @@
                     AreaBorderThickness="2"
                     Visibility="Visible"
                     >
+
+                    <syncfusion:SfChart.Resources>
+                        <Style x:Key="majorGridLineStyle" TargetType="Line">
+                            <Setter Property="Stroke" Value="Gray"/>
+                            <Setter Property="StrokeThickness" Value="1"/>
+                        </Style>
+                        <Style x:Key="minorGridLineStyle" TargetType="Line">
+                            <Setter Property="Stroke" Value="Gray"/>
+                            <Setter Property="StrokeThickness" Value="1"/>
+                        </Style>
+                    </syncfusion:SfChart.Resources>
+
                     <syncfusion:SfChart.PrimaryAxis>
-                        <syncfusion:CategoryAxis Foreground="{StaticResource Test1}" Header="Distance (M)" FontSize="14" HorizontalAlignment="Center"/>
+                        <syncfusion:CategoryAxis 
+                            Header="Distance (M)" 
+                            FontSize="14"
+                            Foreground="Black"
+                            HorizontalAlignment="Center" 
+                            ShowGridLines="True"
+                            LabelsPosition="Outside"
+                            MajorGridLineStyle="{StaticResource majorGridLineStyle }"
+                            MinorGridLineStyle="{StaticResource minorGridLineStyle}"
+                            />
                     </syncfusion:SfChart.PrimaryAxis>
+
                     <syncfusion:SfChart.SecondaryAxis>
-                        <syncfusion:NumericalAxis Foreground="{StaticResource Test1}" Header="Moment (kN*m)" FontSize="14" HorizontalAlignment="Center"/>
+                        <syncfusion:NumericalAxis 
+                            Header="Moment (kN*m)" 
+                            FontSize="14" 
+                            Foreground="Black"
+                            HorizontalAlignment="Center" 
+                            ShowGridLines="True"
+                            LabelsPosition="Outside" 
+                            MajorGridLineStyle="{StaticResource majorGridLineStyle }"
+                            MinorGridLineStyle="{StaticResource minorGridLineStyle}"
+                            />
                     </syncfusion:SfChart.SecondaryAxis>
 
                     <syncfusion:AreaSeries >
@@ -235,24 +276,12 @@
                             <syncfusion:ChartAdornmentInfo ShowLabel="True" LabelPosition="Auto"/>
                         </syncfusion:AreaSeries.AdornmentsInfo>
                     </syncfusion:AreaSeries>
-
-                    <syncfusion:AreaSeries Label="Bending Moment Diagram" ItemsSource="{Binding BendingMomentData}" XBindingPath="XCoord" YBindingPath="YCoord" />
-
-                    <syncfusion:SfChart.ColorModel>
-                        <syncfusion:ChartColorModel>
-                            <syncfusion:ChartColorModel.CustomBrushes>
-                                <SolidColorBrush Color="BlueViolet"/>
-                                <SolidColorBrush Color="#5D9BD7"/>
-                                <SolidColorBrush Color="Purple"/>
-                            </syncfusion:ChartColorModel.CustomBrushes>
-                        </syncfusion:ChartColorModel>
-                    </syncfusion:SfChart.ColorModel>
+                    
+                    <syncfusion:AreaSeries ShowTooltip="True" Interior="#5D9BD7" Label="Bending Moment Diagram" ItemsSource="{Binding BendingMomentData}" XBindingPath="XCoord" YBindingPath="YCoord" />
 
                 </syncfusion:SfChart>
             </Border>
         </Grid>
-        
-        <Border BorderThickness="1" BorderBrush="Black"/>
 
     </Grid>
 </Page>
