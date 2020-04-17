@@ -7,12 +7,17 @@
     xmlns:System="using:System" xmlns:Custom="using:C1.Xaml.FlexGrid"
     xmlns:Custom1="using:C1.Xaml.Chart"
     xmlns:Custom2="using:C1.Xaml.Chart.Finance"
-    xmlns:Custom3="using:Syncfusion.UI.Xaml.Charts"
+    xmlns:VM="using:InternalForcesCalculator.ViewModel"
+    xmlns:syncfusion="using:Syncfusion.UI.Xaml.Charts" 
     x:Class="InternalForcesCalculator.MainPage"
     mc:Ignorable="d"
     Background="{ThemeResource BackgroundColor}"
+    RequestedTheme="Default"
     >
 
+    <Page.DataContext>
+        <VM:ViewModel/>
+    </Page.DataContext>
 
 
     <Grid Margin="80,80,80,80" Background="{StaticResource ThemeColor0}">
@@ -142,9 +147,11 @@
 
         <Grid Margin="700,55,55,430" Background="{StaticResource Test1}" >
             <Border BorderThickness="1" BorderBrush="Black">
-                <Custom3:SfChart
+                <syncfusion:SfChart
                     Header="Shear Force Diagram"
                     Foreground="{StaticResource ThemeColor1}"
+                    
+                    Name="Samuel"
                     
                     FontSize="20" 
                     HorizontalAlignment="Left" 
@@ -153,20 +160,29 @@
                     Width="550" 
                     Height="330"
                     Background="{StaticResource Test1}"
-                    
                     AreaBackground="{StaticResource Test1}"
                     AreaBorderThickness="3"
                     Visibility="Visible"
-                    />
+                    >
+                    <syncfusion:SfChart.PrimaryAxis>
+                        <syncfusion:CategoryAxis Header="Distance (M)" FontSize="14" HorizontalAlignment="Center"/>
+                    </syncfusion:SfChart.PrimaryAxis>
+                    <syncfusion:SfChart.SecondaryAxis>
+                        <syncfusion:NumericalAxis Header="Force (kN)" FontSize="14" HorizontalAlignment="Center"/>
+                    </syncfusion:SfChart.SecondaryAxis>
+                    
+                </syncfusion:SfChart>
+
+
             </Border>
         </Grid>
 
         <Grid Margin="700,430,55,55" Background="{StaticResource Test1}" >
             <Border BorderThickness="1" BorderBrush="Black">
-                <Custom3:SfChart 
+                <syncfusion:SfChart 
                     Header="Bending Moment Diagram" 
                     
-
+                    
                     FontSize="20" HorizontalAlignment="Left" 
                     VerticalAlignment="Bottom" Margin="6,0,0,4" 
                     Width="550" 
@@ -175,7 +191,14 @@
                     AreaBackground="{StaticResource Test1}" 
                     AreaBorderThickness="3"
                     Visibility="Visible"
-                    />
+                    >
+                    <syncfusion:SfChart.PrimaryAxis>
+                        <syncfusion:CategoryAxis Header="Distance (M)" FontSize="14" HorizontalAlignment="Center"/>
+                    </syncfusion:SfChart.PrimaryAxis>
+                    <syncfusion:SfChart.SecondaryAxis>
+                        <syncfusion:NumericalAxis Header="Moment (kN*m)" FontSize="14" HorizontalAlignment="Center"/>
+                    </syncfusion:SfChart.SecondaryAxis>
+                </syncfusion:SfChart>
             </Border>
         </Grid>
         
