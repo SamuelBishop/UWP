@@ -16,18 +16,21 @@ namespace InternalForcesCalculator.ViewModel
         {
             ShearForceData = new List<ShearForce>()
             {
-                new ShearForce { XCoord = 10, YCoord = 10 },
-                new ShearForce { XCoord = 20, YCoord = 20 },
-                new ShearForce { XCoord = 30, YCoord = 30 },
-                new ShearForce { XCoord = 40, YCoord = 40 }
+                new ShearForce { XCoord = 0, YCoord = 7 },
+                new ShearForce { XCoord = 1, YCoord = 7 },
+                new ShearForce { XCoord = 1.01F, YCoord = -5 },
+                new ShearForce { XCoord = 4, YCoord = -5 },
+                new ShearForce { XCoord = 4.01F, YCoord = 8 },
+                new ShearForce { XCoord = 5, YCoord = 8 }
             };
 
             BendingMomentData = new List<BendingMoment>()
             {
-                new BendingMoment { XCoord = 10, YCoord = 10 },
-                new BendingMoment { XCoord = 20, YCoord = 20 },
-                new BendingMoment { XCoord = 30, YCoord = 30 },
-                new BendingMoment { XCoord = 40, YCoord = 40 }
+                new BendingMoment { XCoord = 0, YCoord = 0 },
+                new BendingMoment { XCoord = 1, YCoord = 7 },
+                new BendingMoment { XCoord = 2.5F, YCoord = 0 },
+                new BendingMoment { XCoord = 4, YCoord = -8 },
+                new BendingMoment { XCoord = 5, YCoord = 0 }
             };
         }
     }

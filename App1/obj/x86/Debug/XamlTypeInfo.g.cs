@@ -8,22 +8,22 @@
 //------------------------------------------------------------------------------
 
 
-namespace App1
+namespace InternalForcesCalculator
 {
     public partial class App : global::Windows.UI.Xaml.Markup.IXamlMetadataProvider
     {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.18362.1")]
-        private global::App1.App1_XamlTypeInfo.XamlMetaDataProvider __appProvider;
+        private global::App1.InternalForcesCalculator_XamlTypeInfo.XamlMetaDataProvider __appProvider;
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.18362.1")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private global::App1.App1_XamlTypeInfo.XamlMetaDataProvider _AppProvider
+        private global::App1.InternalForcesCalculator_XamlTypeInfo.XamlMetaDataProvider _AppProvider
         {
             get
             {
                 if (__appProvider == null)
                 {
-                    __appProvider = new global::App1.App1_XamlTypeInfo.XamlMetaDataProvider();
+                    __appProvider = new global::App1.InternalForcesCalculator_XamlTypeInfo.XamlMetaDataProvider();
                 }
                 return __appProvider;
             }
@@ -61,7 +61,7 @@ namespace App1
     }
 }
 
-namespace App1.App1_XamlTypeInfo
+namespace App1.InternalForcesCalculator_XamlTypeInfo
 {
     /// <summary>
     /// Main class for providing metadata for the app or library
@@ -70,15 +70,15 @@ namespace App1.App1_XamlTypeInfo
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public sealed class XamlMetaDataProvider : global::Windows.UI.Xaml.Markup.IXamlMetadataProvider
     {
-        private global::App1.App1_XamlTypeInfo.XamlTypeInfoProvider _provider = null;
+        private global::App1.InternalForcesCalculator_XamlTypeInfo.XamlTypeInfoProvider _provider = null;
 
-        private global::App1.App1_XamlTypeInfo.XamlTypeInfoProvider Provider
+        private global::App1.InternalForcesCalculator_XamlTypeInfo.XamlTypeInfoProvider Provider
         {
             get
             {
                 if (_provider == null)
                 {
-                    _provider = new global::App1.App1_XamlTypeInfo.XamlTypeInfoProvider();
+                    _provider = new global::App1.InternalForcesCalculator_XamlTypeInfo.XamlTypeInfoProvider();
                 }
                 return _provider;
             }

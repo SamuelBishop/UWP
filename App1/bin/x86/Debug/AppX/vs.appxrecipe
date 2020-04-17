@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-16T03:49:31.298</Modified>
+      <Modified>2020-04-17T19:42:59.194</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\bin\x86\Debug\App1.exe">
       <PackagePath>entrypoint\App1.exe</PackagePath>
-      <Modified>2020-04-16T03:49:29.842</Modified>
+      <Modified>2020-04-17T19:42:57.908</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Syncfusion\Essential Studio\Universal Windows\18.1.0.42\Universal Windows\10.0\SDK\References\CommonConfiguration\neutral\Syncfusion.Calculate.UWP.dll">
       <PackagePath>Syncfusion.Calculate.UWP.dll</PackagePath>
@@ -4340,7 +4340,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2020-04-15T21:24:54.975</Modified>
+      <Modified>2020-04-16T04:03:30.556</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -4378,15 +4378,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\bin\x86\Debug\App1.xr.xml">
       <PackagePath>App1.xr.xml</PackagePath>
-      <Modified>2020-04-16T03:49:29.523</Modified>
+      <Modified>2020-04-17T19:35:48.386</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-04-16T02:46:14.978</Modified>
+      <Modified>2020-04-17T19:41:10.038</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-04-16T03:49:29.578</Modified>
+      <Modified>2020-04-17T19:42:57.668</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -4394,11 +4394,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-04-16T02:46:16.252</Modified>
+      <Modified>2020-04-17T19:41:11.262</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\bin\x86\Debug\Core\App1.exe">
       <PackagePath>App1.exe</PackagePath>
-      <Modified>2020-04-16T03:49:31.286</Modified>
+      <Modified>2020-04-17T19:42:59.189</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

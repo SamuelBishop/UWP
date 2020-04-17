@@ -1,1 +1,1 @@
-C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\App1.csproj;x86
+C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\InternalForcesCalculator.csproj;x86
