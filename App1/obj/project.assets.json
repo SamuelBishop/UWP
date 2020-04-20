@@ -8151,18 +8151,18 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sjbc3\\.nuget\\packages\\": {},
+    "C:\\Users\\Sam Bishop\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sjbc3\\OneDrive\\Desktop\\git\\UWP\\App1\\InternalForcesCalculator.csproj",
+      "projectUniqueName": "C:\\Users\\Sam Bishop\\Desktop\\git\\UWP\\App1\\InternalForcesCalculator.csproj",
       "projectName": "InternalForcesCalculator",
-      "projectPath": "C:\\Users\\sjbc3\\OneDrive\\Desktop\\git\\UWP\\App1\\InternalForcesCalculator.csproj",
-      "packagesPath": "C:\\Users\\sjbc3\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sjbc3\\OneDrive\\Desktop\\git\\UWP\\App1\\obj\\",
+      "projectPath": "C:\\Users\\Sam Bishop\\Desktop\\git\\UWP\\App1\\InternalForcesCalculator.csproj",
+      "packagesPath": "C:\\Users\\Sam Bishop\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Sam Bishop\\Desktop\\git\\UWP\\App1\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -8170,7 +8170,7 @@
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\sjbc3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Sam Bishop\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],

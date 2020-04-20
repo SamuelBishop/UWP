@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-AH331O8</Machine>
+    <Machine>DESKTOP-25NE200</Machine>
     <WindowsUser>Sam Bishop</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>25a19b39-cb91-4538-a1e5-72f12dfff12d</PackageIdentityName>
     <PackageIdentityPublisher>CN=Sam Bishop</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Sam Bishop\Desktop\git\UWP\App1\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>F70AF9E2DD375044464702137626D7FF43963E28E406B7B89AE60E0F27270098</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\Sam Bishop\Desktop\git\UWP\App1\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>50278EA8A6E9784E51959B88923CD8CD92D1BCC48AD115704B81BCBFFECF4D7E</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>25a19b39-cb91-4538-a1e5-72f12dfff12d_1.0.0.0_x86__05ypbc4k8hpf2</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>25a19b39-cb91-4538-a1e5-72f12dfff12d_05ypbc4k8hpf2!App</RegisteredUserModeAppID>
     <RegisteredPackageID>25a19b39-cb91-4538-a1e5-72f12dfff12d</RegisteredPackageID>
@@ -27,16 +27,16 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-17T22:51:18.594</Modified>
+      <Modified>2020-04-20T16:06:35.649</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\bin\x86\Debug\App1.exe">
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\bin\x86\Debug\App1.exe">
       <PackagePath>entrypoint\App1.exe</PackagePath>
-      <Modified>2020-04-17T22:51:16.490</Modified>
+      <Modified>2020-04-20T16:01:43.692</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Syncfusion\Essential Studio\Universal Windows\18.1.0.42\Universal Windows\10.0\SDK\References\CommonConfiguration\neutral\Syncfusion.Calculate.UWP.dll">
       <PackagePath>Syncfusion.Calculate.UWP.dll</PackagePath>
@@ -4338,67 +4338,168 @@
       <PackagePath>Syncfusion.SfSpellChecker.UWP\SpellCheckerDialog\SpellCheckerDialog.xaml.cs</PackagePath>
       <Modified>2020-03-27T11:34:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2020-04-16T04:03:30.556</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\Assets\LockScreenLogo.scale-200.png">
-      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2020-04-15T21:24:54.967</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\Assets\SplashScreen.scale-200.png">
-      <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\AppIconGen.altform-lightunplated_targetsize-16.png">
+      <PackagePath>Assets\AppIconGen.altform-lightunplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-15T21:24:54.968</Modified>
+      <Modified>2020-04-20T15:43:00.880</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\AppIconGen.altform-lightunplated_targetsize-24.png">
+      <PackagePath>Assets\AppIconGen.altform-lightunplated_targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-04-20T15:43:00.892</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\AppIconGen.altform-lightunplated_targetsize-256.png">
+      <PackagePath>Assets\AppIconGen.altform-lightunplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-04-20T15:43:00.945</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\AppIconGen.altform-lightunplated_targetsize-32.png">
+      <PackagePath>Assets\AppIconGen.altform-lightunplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-04-20T15:43:00.918</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\AppIconGen.altform-lightunplated_targetsize-48.png">
+      <PackagePath>Assets\AppIconGen.altform-lightunplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-04-20T15:43:00.928</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\AppIconGen.altform-unplated_targetsize-16.png">
+      <PackagePath>Assets\AppIconGen.altform-unplated_targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-04-20T15:43:00.815</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\AppIconGen.altform-unplated_targetsize-24.png">
+      <PackagePath>Assets\AppIconGen.altform-unplated_targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-04-20T15:43:00.826</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\AppIconGen.altform-unplated_targetsize-256.png">
+      <PackagePath>Assets\AppIconGen.altform-unplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-04-20T15:43:00.871</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\AppIconGen.altform-unplated_targetsize-32.png">
+      <PackagePath>Assets\AppIconGen.altform-unplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-04-20T15:43:00.836</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\AppIconGen.altform-unplated_targetsize-48.png">
+      <PackagePath>Assets\AppIconGen.altform-unplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-04-20T15:43:00.848</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\AppIconGen.scale-100.png">
+      <PackagePath>Assets\AppIconGen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-04-20T15:43:00.671</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\AppIconGen.scale-125.png">
+      <PackagePath>Assets\AppIconGen.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-04-20T15:43:00.684</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\AppIconGen.scale-150.png">
+      <PackagePath>Assets\AppIconGen.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-04-20T15:43:00.697</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\AppIconGen.scale-200.png">
+      <PackagePath>Assets\AppIconGen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-04-20T15:43:00.711</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\AppIconGen.scale-400.png">
+      <PackagePath>Assets\AppIconGen.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-04-20T15:43:00.732</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\AppIconGen.targetsize-16.png">
+      <PackagePath>Assets\AppIconGen.targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-04-20T15:43:00.743</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\AppIconGen.targetsize-24.png">
+      <PackagePath>Assets\AppIconGen.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-04-20T15:43:00.753</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\AppIconGen.targetsize-256.png">
+      <PackagePath>Assets\AppIconGen.targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-04-20T15:43:00.803</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\AppIconGen.targetsize-32.png">
+      <PackagePath>Assets\AppIconGen.targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-04-20T15:43:00.764</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\AppIconGen.targetsize-48.png">
+      <PackagePath>Assets\AppIconGen.targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2020-04-20T15:43:00.777</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\SplashScreenIcon.scale-200.png">
+      <PackagePath>Assets\SplashScreenIcon.scale-200.png</PackagePath>
+      <Modified>2020-04-20T16:06:25.053</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\LockScreenLogo.scale-200.png">
+      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
+      <Modified>2020-04-20T14:46:27.191</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\SplashScreen.scale-200.png">
+      <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
+      <Modified>2020-04-20T14:46:27.192</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-15T21:24:54.969</Modified>
+      <Modified>2020-04-20T14:46:27.193</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-15T21:24:54.969</Modified>
+      <Modified>2020-04-20T14:46:27.194</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-15T21:24:54.970</Modified>
+      <Modified>2020-04-20T14:46:27.195</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-15T21:24:54.971</Modified>
+      <Modified>2020-04-20T14:46:27.196</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-15T21:24:54.972</Modified>
+      <Modified>2020-04-20T14:46:27.196</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\bin\x86\Debug\App1.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+      <Modified>2020-04-20T14:46:27.205</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\bin\x86\Debug\App1.xr.xml">
       <PackagePath>App1.xr.xml</PackagePath>
-      <Modified>2020-04-17T22:51:16.137</Modified>
+      <Modified>2020-04-20T14:46:28.580</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-04-17T22:51:16.260</Modified>
+      <Modified>2020-04-20T15:43:38.959</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-04-17T22:51:16.259</Modified>
+      <Modified>2020-04-20T15:43:38.958</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2019-03-18T22:33:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-04-17T22:51:17.370</Modified>
+      <Modified>2020-04-20T16:02:40.880</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\bin\x86\Debug\Core\App1.exe">
+    <AppxPackagedFile Include="C:\Users\Sam Bishop\Desktop\git\UWP\App1\bin\x86\Debug\Core\App1.exe">
       <PackagePath>App1.exe</PackagePath>
-      <Modified>2020-04-17T22:51:18.589</Modified>
+      <Modified>2020-04-20T16:06:35.642</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -133,6 +133,27 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\AppIconGen.altform-lightunplated_targetsize-16.png" />
+    <Content Include="Assets\AppIconGen.altform-lightunplated_targetsize-24.png" />
+    <Content Include="Assets\AppIconGen.altform-lightunplated_targetsize-256.png" />
+    <Content Include="Assets\AppIconGen.altform-lightunplated_targetsize-32.png" />
+    <Content Include="Assets\AppIconGen.altform-lightunplated_targetsize-48.png" />
+    <Content Include="Assets\AppIconGen.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\AppIconGen.altform-unplated_targetsize-24.png" />
+    <Content Include="Assets\AppIconGen.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\AppIconGen.altform-unplated_targetsize-32.png" />
+    <Content Include="Assets\AppIconGen.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\AppIconGen.scale-100.png" />
+    <Content Include="Assets\AppIconGen.scale-125.png" />
+    <Content Include="Assets\AppIconGen.scale-150.png" />
+    <Content Include="Assets\AppIconGen.scale-200.png" />
+    <Content Include="Assets\AppIconGen.scale-400.png" />
+    <Content Include="Assets\AppIconGen.targetsize-16.png" />
+    <Content Include="Assets\AppIconGen.targetsize-24.png" />
+    <Content Include="Assets\AppIconGen.targetsize-256.png" />
+    <Content Include="Assets\AppIconGen.targetsize-32.png" />
+    <Content Include="Assets\AppIconGen.targetsize-48.png" />
+    <Content Include="Assets\SplashScreenIcon.scale-200.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
