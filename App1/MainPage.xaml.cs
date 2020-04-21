@@ -12,19 +12,21 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using InternalForcesCalculator.ViewModel;
+using InternalForcesCalculator.Models;
+using System.Globalization;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace InternalForcesCalculator
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class MainPage : Page
     {
         public MainPage()
         {
             this.InitializeComponent();
+
+            // new ShearForce { XCoord = float.Parse(PointLoadingLocation.Text, CultureInfo.InvariantCulture.NumberFormat), YCoord = float.Parse(PointLoadingMagnitude.Text, CultureInfo.InvariantCulture.NumberFormat) }; 
         }
 
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)

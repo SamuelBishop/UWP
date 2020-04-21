@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "X5/Ym8tf5UAAy3lLTKndNxyqb4cehxyYyJdTn81iVkGBiZmY+pKS0aEQxsacK97nOtPrUA4WtXhWGBFhat0DvQ==",
+  "dgSpecHash": "dNOHCC1TfYLzJ07ycz2bCoDTI+jKTmrjcOvqnOzm185VVIrQxXjkrOCwhSA5X3za8lmGIsugCCwU9Rk52l2ncQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sam Bishop\\Desktop\\git\\UWP\\App1\\InternalForcesCalculator.csproj",
+  "projectFilePath": "C:\\Users\\sjbc3\\OneDrive\\Desktop\\git\\UWP\\App1\\InternalForcesCalculator.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.native.compiler\\2.2.7-rel-27913-00\\microsoft.net.native.compiler.2.2.7-rel-27913-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.uwpcoreruntimesdk\\2.2.9\\microsoft.net.uwpcoreruntimesdk.2.2.9.nupkg.sha512",
