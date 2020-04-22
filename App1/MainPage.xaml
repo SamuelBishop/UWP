@@ -57,10 +57,10 @@
                                 <TextBlock Foreground="Black" Text="Point Loading" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged" FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
-                                <TextBox x:Name="PointLoadingLocation" FontSize="16"/>
+                                <TextBox Text="{Binding PointLoadingLocation}" FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
-                                <TextBox x:Name="PointLoadingMagnitude" FontSize="16"/>
+                                <TextBox Text="{Binding PointLoadingMagnitude}" FontSize="16"/>
                             </Border>
                         </StackPanel>
 
@@ -69,10 +69,10 @@
                                 <TextBlock Foreground="Black" Text="Triangular&#xA;Distributed Loading" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged" FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
-                                <TextBox x:Name="TriangularDistributedLoadingLocation" FontSize="16"/>
+                                <TextBox Text="{Binding TriangularDistributedLoadingLocation}" FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
-                                <TextBox x:Name="TriangularDistributedLoadingMagnitude" FontSize="16"/>
+                                <TextBox Text="{Binding TriangularDistributedLoadingMagnitude}" FontSize="16"/>
                             </Border>
                         </StackPanel>
 
@@ -81,10 +81,10 @@
                                 <TextBlock Foreground="Black" Text="Rectangular &#xA;Distributed Loading" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged" FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
-                                <TextBox x:Name="RectangularDistributedLoadingLocation" FontSize="16"/>
+                                <TextBox Text="{Binding RectangularDistributedLoadingLocation}" FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
-                                <TextBox x:Name="RectangularDistributedLoadingMagnitude" FontSize="16"/>
+                                <TextBox Text="{Binding RectangularDistributedLoadingMagnitude}" FontSize="16"/>
                             </Border>
                         </StackPanel>
 
@@ -93,10 +93,10 @@
                                 <TextBlock Foreground="Black" Text="Free Moment" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged" FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
-                                <TextBox x:Name="FreeMomentLocation" FontSize="16"/>
+                                <TextBox Text="{Binding FreeMomentLocation}" FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
-                                <TextBox x:Name="FreeMomentMagnitude" FontSize="16"/>
+                                <TextBox Text="{Binding FreeMomentMagnitude}" FontSize="16"/>
                             </Border>
                         </StackPanel>
                     </Grid>
@@ -123,7 +123,7 @@
                                 <TextBlock Foreground="Black" Text="Pin Support" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged" FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
-                                <TextBox x:Name="PinSupportLocation" FontSize="16"/>
+                                <TextBox Text="{Binding PinSupportLocation}" FontSize="16"/>
                             </Border>
                         </StackPanel>
 
@@ -132,7 +132,7 @@
                                 <TextBlock Foreground="Black" Text="Roller Support" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged" FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
-                                <TextBox x:Name="RollerSupportLocation" FontSize="16"/>
+                                <TextBox Text="{Binding RollerSupportLocation}" FontSize="16"/>
                             </Border>
                         </StackPanel>
 
@@ -141,7 +141,7 @@
                                 <TextBlock Foreground="Black" Text="Fixed Support" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged" FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
-                                <TextBox x:Name="FixedSupportLocation" FontSize="16"/>
+                                <TextBox Text="{Binding FixedSupportLocation}" FontSize="16"/>
                             </Border>
                         </StackPanel>
                     </Grid>
@@ -211,7 +211,7 @@
                                 </syncfusion:StepAreaSeries.AdornmentsInfo>
                             </syncfusion:StepAreaSeries>
 
-                            <syncfusion:StepAreaSeries ShowTooltip="True" Interior="#5D9BD7" Label="Bending Moment Diagram" ItemsSource="{Binding ShearForceData}" XBindingPath="XCoord" YBindingPath="YCoord" />
+                            <syncfusion:StepAreaSeries Name="SFD" ShowTooltip="True" Interior="#5D9BD7" Label="Bending Moment Diagram" ItemsSource="{Binding ShearForceData}" XBindingPath="XCoord" YBindingPath="YCoord" />
 
                         </syncfusion:SfChart>
                     </Border>
@@ -276,7 +276,7 @@
                                 </syncfusion:AreaSeries.AdornmentsInfo>
                             </syncfusion:AreaSeries>
 
-                            <syncfusion:AreaSeries ShowTooltip="True" Interior="#5D9BD7" Label="Bending Moment Diagram" ItemsSource="{Binding BendingMomentData}" XBindingPath="XCoord" YBindingPath="YCoord" />
+                            <syncfusion:AreaSeries Name="BMD" ShowTooltip="True" Interior="#5D9BD7" Label="Bending Moment Diagram" ItemsSource="{Binding BendingMomentData}" XBindingPath="XCoord" YBindingPath="YCoord" />
 
                         </syncfusion:SfChart>
                     </Border>

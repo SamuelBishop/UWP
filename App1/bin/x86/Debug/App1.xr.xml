@@ -3,6 +3,17 @@
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="BendingMomentData" />
     <RootPropertyPathName Name="ShearForceData" />
+    <RootPropertyPathName Name="FixedSupportLocation" />
+    <RootPropertyPathName Name="RollerSupportLocation" />
+    <RootPropertyPathName Name="PinSupportLocation" />
+    <RootPropertyPathName Name="FreeMomentMagnitude" />
+    <RootPropertyPathName Name="FreeMomentLocation" />
+    <RootPropertyPathName Name="RectangularDistributedLoadingMagnitude" />
+    <RootPropertyPathName Name="RectangularDistributedLoadingLocation" />
+    <RootPropertyPathName Name="TriangularDistributedLoadingMagnitude" />
+    <RootPropertyPathName Name="TriangularDistributedLoadingLocation" />
+    <RootPropertyPathName Name="PointLoadingMagnitude" />
+    <RootPropertyPathName Name="PointLoadingLocation" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -110,6 +121,7 @@
     </RootType>
     <RootType FullName="Syncfusion.UI.Xaml.Charts.AreaSeries">
       <RootProperty Name="AdornmentsInfo" />
+      <RootProperty Name="Name" />
       <RootProperty Name="ShowTooltip" />
       <RootProperty Name="Interior" />
       <RootProperty Name="Label" />
@@ -124,6 +136,7 @@
     </RootType>
     <RootType FullName="Syncfusion.UI.Xaml.Charts.StepAreaSeries">
       <RootProperty Name="AdornmentsInfo" />
+      <RootProperty Name="Name" />
       <RootProperty Name="ShowTooltip" />
       <RootProperty Name="Interior" />
       <RootProperty Name="Label" />
@@ -141,6 +154,7 @@
       <RootProperty Name="Children" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Text" />
       <RootProperty Name="FontSize" />
     </RootType>
     <RootType FullName="InternalForcesCalculator.MainPage" />

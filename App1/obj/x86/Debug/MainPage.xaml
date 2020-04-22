@@ -42,61 +42,61 @@
 
                         <StackPanel Grid.Row="0" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal">
                             <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor0}">
-                                <TextBlock x:ConnectionId='26' Foreground="White" Text="Type of Loading" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
+                                <TextBlock x:ConnectionId='17' Foreground="White" Text="Type of Loading" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                             </Border>
                             <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor0}">
-                                <TextBlock x:ConnectionId='25' Foreground="White" Text="Location" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
+                                <TextBlock x:ConnectionId='16' Foreground="White" Text="Location" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                             </Border>
                             <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor0}">
-                                <TextBlock x:ConnectionId='24' Foreground="White" Text="Magnitude" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
+                                <TextBlock x:ConnectionId='15' Foreground="White" Text="Magnitude" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                             </Border>
                         </StackPanel>
 
                         <StackPanel Grid.Row="1" Margin="10,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" >
                             <Border HorizontalAlignment="Left" VerticalAlignment="Center" Height="60" Width="155" Background="{StaticResource ThemeColor2}">
-                                <TextBlock x:ConnectionId='23' Foreground="Black" Text="Point Loading" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
+                                <TextBlock x:ConnectionId='14' Foreground="Black" Text="Point Loading" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
-                                <TextBox x:ConnectionId='22' x:Name="PointLoadingLocation" FontSize="16"/>
+                                <TextBox Text="{Binding PointLoadingLocation}" FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
-                                <TextBox x:ConnectionId='21' x:Name="PointLoadingMagnitude" FontSize="16"/>
+                                <TextBox Text="{Binding PointLoadingMagnitude}" FontSize="16"/>
                             </Border>
                         </StackPanel>
 
                         <StackPanel Grid.Row="2" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" >
                             <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor3}">
-                                <TextBlock x:ConnectionId='20' Foreground="Black" Text="Triangular&#xA;Distributed Loading" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
+                                <TextBlock x:ConnectionId='13' Foreground="Black" Text="Triangular&#xA;Distributed Loading" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
-                                <TextBox x:ConnectionId='19' x:Name="TriangularDistributedLoadingLocation" FontSize="16"/>
+                                <TextBox Text="{Binding TriangularDistributedLoadingLocation}" FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
-                                <TextBox x:ConnectionId='18' x:Name="TriangularDistributedLoadingMagnitude" FontSize="16"/>
+                                <TextBox Text="{Binding TriangularDistributedLoadingMagnitude}" FontSize="16"/>
                             </Border>
                         </StackPanel>
 
                         <StackPanel Grid.Row="3" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" >
                             <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor2}">
-                                <TextBlock x:ConnectionId='17' Foreground="Black" Text="Rectangular &#xA;Distributed Loading" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
+                                <TextBlock x:ConnectionId='12' Foreground="Black" Text="Rectangular &#xA;Distributed Loading" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
-                                <TextBox x:ConnectionId='16' x:Name="RectangularDistributedLoadingLocation" FontSize="16"/>
+                                <TextBox Text="{Binding RectangularDistributedLoadingLocation}" FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
-                                <TextBox x:ConnectionId='15' x:Name="RectangularDistributedLoadingMagnitude" FontSize="16"/>
+                                <TextBox Text="{Binding RectangularDistributedLoadingMagnitude}" FontSize="16"/>
                             </Border>
                         </StackPanel>
 
                         <StackPanel Grid.Row="4" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" >
                             <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor3}">
-                                <TextBlock x:ConnectionId='14' Foreground="Black" Text="Free Moment" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
+                                <TextBlock x:ConnectionId='11' Foreground="Black" Text="Free Moment" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
-                                <TextBox x:ConnectionId='13' x:Name="FreeMomentLocation" FontSize="16"/>
+                                <TextBox Text="{Binding FreeMomentLocation}" FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
-                                <TextBox x:ConnectionId='12' x:Name="FreeMomentMagnitude" FontSize="16"/>
+                                <TextBox Text="{Binding FreeMomentMagnitude}" FontSize="16"/>
                             </Border>
                         </StackPanel>
                     </Grid>
@@ -111,19 +111,19 @@
 
                         <StackPanel Grid.Row="0" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal">
                             <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor0}">
-                                <TextBlock x:ConnectionId='11' Foreground="White" Text="Type of Support" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
+                                <TextBlock x:ConnectionId='10' Foreground="White" Text="Type of Support" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                             </Border>
                             <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor0}">
-                                <TextBlock x:ConnectionId='10' Foreground="White" Text="Location" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
+                                <TextBlock x:ConnectionId='9' Foreground="White" Text="Location" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                             </Border>
                         </StackPanel>
 
                         <StackPanel Grid.Row="1" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" >
                             <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor2}">
-                                <TextBlock x:ConnectionId='9' Foreground="Black" Text="Pin Support" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
+                                <TextBlock x:ConnectionId='8' Foreground="Black" Text="Pin Support" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
-                                <TextBox x:ConnectionId='8' x:Name="PinSupportLocation" FontSize="16"/>
+                                <TextBox Text="{Binding PinSupportLocation}" FontSize="16"/>
                             </Border>
                         </StackPanel>
 
@@ -132,16 +132,16 @@
                                 <TextBlock x:ConnectionId='7' Foreground="Black" Text="Roller Support" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
-                                <TextBox x:ConnectionId='6' x:Name="RollerSupportLocation" FontSize="16"/>
+                                <TextBox Text="{Binding RollerSupportLocation}" FontSize="16"/>
                             </Border>
                         </StackPanel>
 
                         <StackPanel Grid.Row="3" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" >
                             <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor2}">
-                                <TextBlock x:ConnectionId='5' Foreground="Black" Text="Fixed Support" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
+                                <TextBlock x:ConnectionId='6' Foreground="Black" Text="Fixed Support" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
-                                <TextBox x:ConnectionId='4' x:Name="FixedSupportLocation" FontSize="16"/>
+                                <TextBox Text="{Binding FixedSupportLocation}" FontSize="16"/>
                             </Border>
                         </StackPanel>
                     </Grid>
@@ -211,7 +211,7 @@
                                 </syncfusion:StepAreaSeries.AdornmentsInfo>
                             </syncfusion:StepAreaSeries>
 
-                            <syncfusion:StepAreaSeries ShowTooltip="True" Interior="#5D9BD7" Label="Bending Moment Diagram" ItemsSource="{Binding ShearForceData}" XBindingPath="XCoord" YBindingPath="YCoord" />
+                            <syncfusion:StepAreaSeries x:ConnectionId='5' Name="SFD" ShowTooltip="True" Interior="#5D9BD7" Label="Bending Moment Diagram" ItemsSource="{Binding ShearForceData}" XBindingPath="XCoord" YBindingPath="YCoord" />
 
                         </syncfusion:SfChart>
                     </Border>
@@ -276,7 +276,7 @@
                                 </syncfusion:AreaSeries.AdornmentsInfo>
                             </syncfusion:AreaSeries>
 
-                            <syncfusion:AreaSeries ShowTooltip="True" Interior="#5D9BD7" Label="Bending Moment Diagram" ItemsSource="{Binding BendingMomentData}" XBindingPath="XCoord" YBindingPath="YCoord" />
+                            <syncfusion:AreaSeries x:ConnectionId='4' Name="BMD" ShowTooltip="True" Interior="#5D9BD7" Label="Bending Moment Diagram" ItemsSource="{Binding BendingMomentData}" XBindingPath="XCoord" YBindingPath="YCoord" />
 
                         </syncfusion:SfChart>
                     </Border>
