@@ -23,6 +23,8 @@
     <Viewbox x:ConnectionId='2' Stretch="Uniform" Name="vb1">
         <Grid Margin="0,0,0,0" Background="White" Width="1500" Height="1000">
 
+            <TextBlock Foreground="Black" Text="{Binding PointLoadingLocation}" HorizontalAlignment="Center" Margin="0,15,0,0"/>
+
             <TextBlock Foreground="Black" Text="Internal Forces Project (Sam Bishop, Emily Ladd, Bella Bowers)" Margin="0,30,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" TextWrapping="NoWrap" FontSize="42"/>
 
             <Grid Margin="80,80,80,80" Background="{StaticResource ThemeColor0}" Width="1300" Height="800">
@@ -57,10 +59,10 @@
                                 <TextBlock x:ConnectionId='14' Foreground="Black" Text="Point Loading" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
-                                <TextBox Text="{Binding PointLoadingLocation}" FontSize="16"/>
+                                <TextBox Text="{Binding PointLoadingLocation, Mode=TwoWay}" FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
-                                <TextBox Text="{Binding PointLoadingMagnitude}" FontSize="16"/>
+                                <TextBox Text="{Binding PointLoadingMagnitude, Mode=TwoWay}" FontSize="16"/>
                             </Border>
                         </StackPanel>
 
@@ -69,10 +71,10 @@
                                 <TextBlock x:ConnectionId='13' Foreground="Black" Text="Triangular&#xA;Distributed Loading" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
-                                <TextBox Text="{Binding TriangularDistributedLoadingLocation}" FontSize="16"/>
+                                <TextBox Text="{Binding TriangularDistributedLoadingLocation, Mode=TwoWay}" FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
-                                <TextBox Text="{Binding TriangularDistributedLoadingMagnitude}" FontSize="16"/>
+                                <TextBox Text="{Binding TriangularDistributedLoadingMagnitude, Mode=TwoWay}" FontSize="16"/>
                             </Border>
                         </StackPanel>
 
@@ -81,10 +83,10 @@
                                 <TextBlock x:ConnectionId='12' Foreground="Black" Text="Rectangular &#xA;Distributed Loading" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
-                                <TextBox Text="{Binding RectangularDistributedLoadingLocation}" FontSize="16"/>
+                                <TextBox Text="{Binding RectangularDistributedLoadingLocation, Mode=TwoWay}" FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
-                                <TextBox Text="{Binding RectangularDistributedLoadingMagnitude}" FontSize="16"/>
+                                <TextBox Text="{Binding RectangularDistributedLoadingMagnitude, Mode=TwoWay}" FontSize="16"/>
                             </Border>
                         </StackPanel>
 
@@ -93,10 +95,10 @@
                                 <TextBlock x:ConnectionId='11' Foreground="Black" Text="Free Moment" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
-                                <TextBox Text="{Binding FreeMomentLocation}" FontSize="16"/>
+                                <TextBox Text="{Binding FreeMomentLocation, Mode=TwoWay}" FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
-                                <TextBox Text="{Binding FreeMomentMagnitude}" FontSize="16"/>
+                                <TextBox Text="{Binding FreeMomentMagnitude, Mode=TwoWay}" FontSize="16"/>
                             </Border>
                         </StackPanel>
                     </Grid>
@@ -123,7 +125,7 @@
                                 <TextBlock x:ConnectionId='8' Foreground="Black" Text="Pin Support" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
-                                <TextBox Text="{Binding PinSupportLocation}" FontSize="16"/>
+                                <TextBox Text="{Binding PinSupportLocation, Mode=TwoWay}" FontSize="16"/>
                             </Border>
                         </StackPanel>
 
@@ -132,7 +134,7 @@
                                 <TextBlock x:ConnectionId='7' Foreground="Black" Text="Roller Support" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
-                                <TextBox Text="{Binding RollerSupportLocation}" FontSize="16"/>
+                                <TextBox Text="{Binding RollerSupportLocation, Mode=TwoWay}" FontSize="16"/>
                             </Border>
                         </StackPanel>
 
@@ -141,7 +143,7 @@
                                 <TextBlock x:ConnectionId='6' Foreground="Black" Text="Fixed Support" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
-                                <TextBox Text="{Binding FixedSupportLocation}" FontSize="16"/>
+                                <TextBox Text="{Binding FixedSupportLocation, Mode=TwoWay}" FontSize="16"/>
                             </Border>
                         </StackPanel>
                     </Grid>
