@@ -45,7 +45,7 @@
                                 <TextBlock x:ConnectionId='17' Foreground="White" Text="Type of Loading" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                             </Border>
                             <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor0}">
-                                <TextBlock x:ConnectionId='16' Foreground="White" Text="Location" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
+                                <TextBlock x:ConnectionId='16' Foreground="White" Text="Location&#xA;(Length Dist Loads)" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>
                             </Border>
                             <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor0}">
                                 <TextBlock x:ConnectionId='15' Foreground="White" Text="Magnitude" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466"                                               FontSize="16"/>

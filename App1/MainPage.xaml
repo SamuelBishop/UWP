@@ -45,7 +45,7 @@
                                 <TextBlock Foreground="White" Text="Type of Loading" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged" FontSize="16"/>
                             </Border>
                             <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor0}">
-                                <TextBlock Foreground="White" Text="Location" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged" FontSize="16"/>
+                                <TextBlock Foreground="White" Text="Location&#xA;(Length Dist Loads)" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged" FontSize="16"/>
                             </Border>
                             <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor0}">
                                 <TextBlock Foreground="White" Text="Magnitude" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged" FontSize="16"/>
