@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-22T16:04:19.071</Modified>
+      <Modified>2020-04-22T16:39:16.708</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\bin\x86\Debug\App1.exe">
       <PackagePath>entrypoint\App1.exe</PackagePath>
-      <Modified>2020-04-22T16:04:17.869</Modified>
+      <Modified>2020-04-22T16:39:15.581</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Syncfusion\Essential Studio\Universal Windows\18.1.0.42\Universal Windows\10.0\SDK\References\CommonConfiguration\neutral\Syncfusion.Calculate.UWP.dll">
       <PackagePath>Syncfusion.Calculate.UWP.dll</PackagePath>
@@ -4479,15 +4479,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\bin\x86\Debug\App1.xr.xml">
       <PackagePath>App1.xr.xml</PackagePath>
-      <Modified>2020-04-22T15:19:48.101</Modified>
+      <Modified>2020-04-22T16:31:53.931</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-04-22T15:46:54.431</Modified>
+      <Modified>2020-04-22T16:39:15.364</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-04-22T15:46:54.431</Modified>
+      <Modified>2020-04-22T16:39:15.364</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -4499,7 +4499,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sjbc3\OneDrive\Desktop\git\UWP\App1\bin\x86\Debug\Core\App1.exe">
       <PackagePath>App1.exe</PackagePath>
-      <Modified>2020-04-22T16:04:19.065</Modified>
+      <Modified>2020-04-22T16:39:16.702</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

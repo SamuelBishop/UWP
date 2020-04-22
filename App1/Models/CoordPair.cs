@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InternalForcesCalculator.Models
 {
-    public class BendingMoment
+    public class CoordPair
     {
         public float XCoord { get; set; }
         public float YCoord { get; set; }

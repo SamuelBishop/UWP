@@ -20,6 +20,7 @@ namespace InternalForcesCalculator.ViewModel
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
+        // Declaring all two-way data bindings that update the ShearForceData and BendingMomentData
         private float pointLoadingLocation { get; set; }
         public float PointLoadingLocation
         {
@@ -163,8 +164,9 @@ namespace InternalForcesCalculator.ViewModel
             }
         }
 
-        private List<ShearForce> shearForceData { get; set; }
-        public List<ShearForce> ShearForceData
+        // Setting the ShearForceData with the CreateShearForceModel function every time a binding is updated
+        private List<CoordPair> shearForceData { get; set; }
+        public List<CoordPair> ShearForceData
         {
             get { return CreateShearForceModel(
                 PointLoadingLocation,
@@ -185,41 +187,38 @@ namespace InternalForcesCalculator.ViewModel
             }
         }
 
-        private List<BendingMoment> bendingMomentData { get; set; }
-        public List<BendingMoment> BendingMomentData
+        // Setting the BendingMomentData with the CreateBendingMomentModel function every time a binding is updated
+        private List<CoordPair> bendingMomentData { get; set; }
+        public List<CoordPair> BendingMomentData
         {
             get { return bendingMomentData; }
             set {
                 bendingMomentData = value; 
-                OnPropertyChanged("PointLoadingLocation");
-                OnPropertyChanged("PointLoadingMagnitude");
             }
         }
 
-        
-
-        // Constructor
+        // Default Constructor
         public ViewModel()
         {
-            ShearForceData = new List<ShearForce>()
+            ShearForceData = new List<CoordPair>()
             {
-                new ShearForce { XCoord = 0, YCoord = 7 },
-                new ShearForce { XCoord = 1, YCoord = -5 },
-                new ShearForce { XCoord = 4, YCoord = 8 },
-                new ShearForce { XCoord = 5, YCoord = 8 },
-                new ShearForce { XCoord = 0, YCoord = 0 }
+                new CoordPair { XCoord = 0, YCoord = 7 },
+                new CoordPair { XCoord = 1, YCoord = -5 },
+                new CoordPair { XCoord = 4, YCoord = 8 },
+                new CoordPair { XCoord = 5, YCoord = 8 },
+                new CoordPair { XCoord = 0, YCoord = 0 }
             };
-            BendingMomentData = new List<BendingMoment>()
+            BendingMomentData = new List<CoordPair>()
             {
-                new BendingMoment { XCoord = 0, YCoord = 0 },
-                new BendingMoment { XCoord = 1, YCoord = 7 },
-                new BendingMoment { XCoord = 2.5F, YCoord = 0 },
-                new BendingMoment { XCoord = 4, YCoord = -8 },
-                new BendingMoment { XCoord = 5, YCoord = 0 }
+                new CoordPair { XCoord = 0, YCoord = 0 },
+                new CoordPair { XCoord = 1, YCoord = 7 },
+                new CoordPair { XCoord = 2.5F, YCoord = 0 },
+                new CoordPair { XCoord = 4, YCoord = -8 },
+                new CoordPair { XCoord = 5, YCoord = 0 }
             };
         }
 
-        public List<ShearForce> CreateShearForceModel(
+        public List<CoordPair> CreateShearForceModel(
             float PointLoadingLocation,
             float PointLoadingMagnitude,
             float TriangularDistributedLoadingLocation,
@@ -233,18 +232,18 @@ namespace InternalForcesCalculator.ViewModel
             float FixedSupportLocation
             )
         {
-            List<ShearForce> Result = new List<ShearForce>()
+            List<CoordPair> Result = new List<CoordPair>()
             {
-                new ShearForce { XCoord = PointLoadingLocation, YCoord = PointLoadingMagnitude },
-                new ShearForce { XCoord = TriangularDistributedLoadingLocation, YCoord = TriangularDistributedLoadingMagnitude },
-                new ShearForce { XCoord = RectangularDistributedLoadingLocation, YCoord = RectangularDistributedLoadingMagnitude },
-                new ShearForce { XCoord = FreeMomentLocation, YCoord = FreeMomentMagnitude }
+                new CoordPair { XCoord = PointLoadingLocation, YCoord = PointLoadingMagnitude },
+                new CoordPair { XCoord = TriangularDistributedLoadingLocation, YCoord = TriangularDistributedLoadingMagnitude },
+                new CoordPair { XCoord = RectangularDistributedLoadingLocation, YCoord = RectangularDistributedLoadingMagnitude },
+                new CoordPair { XCoord = FreeMomentLocation, YCoord = FreeMomentMagnitude }
             };
 
             return Result;
         }
 
-        public List<BendingMoment> CreateBendingMomentModel(
+        public List<CoordPair> CreateBendingMomentModel(
             float PointLoadingLocation,
             float PointLoadingMagnitude,
             float TriangularDistributedLoadingLocation,
@@ -258,9 +257,9 @@ namespace InternalForcesCalculator.ViewModel
             float FixedSupportLocation
             )
         {
-            List<BendingMoment> Result = new List<BendingMoment>()
+            List<CoordPair> Result = new List<CoordPair>()
             {
-                new BendingMoment { XCoord = 0, YCoord = 0 },
+                new CoordPair { XCoord = 0, YCoord = 0 },
             };
 
             return Result;

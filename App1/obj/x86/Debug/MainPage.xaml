@@ -23,8 +23,6 @@
     <Viewbox x:ConnectionId='2' Stretch="Uniform" Name="vb1">
         <Grid Margin="0,0,0,0" Background="White" Width="1500" Height="1000">
 
-            <TextBlock Foreground="Black" Text="{Binding PointLoadingLocation}" HorizontalAlignment="Center" Margin="0,15,0,0"/>
-
             <TextBlock Foreground="Black" Text="Internal Forces Project (Sam Bishop, Emily Ladd, Bella Bowers)" Margin="0,30,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" TextWrapping="NoWrap" FontSize="42"/>
 
             <Grid Margin="80,80,80,80" Background="{StaticResource ThemeColor0}" Width="1300" Height="800">
