@@ -192,7 +192,20 @@ namespace InternalForcesCalculator.ViewModel
         private List<CoordPair> bendingMomentData { get; set; }
         public List<CoordPair> BendingMomentData
         {
-            get { return bendingMomentData; }
+            get { return CreateBendingMomentModel(
+                PointLoadingLocation,
+                PointLoadingMagnitude,
+                TriangularDistributedLoadingLocation,
+                TriangularDistributedLoadingMagnitude,
+                RectangularDistributedLoadingLocation,
+                RectangularDistributedLoadingMagnitude,
+                FreeMomentLocation,
+                FreeMomentMagnitude,
+                PinSupportLocation,
+                RollerSupportLocation,
+                FixedSupportLocation
+                );
+            }
             set {
                 bendingMomentData = value; 
             }
@@ -314,16 +327,49 @@ namespace InternalForcesCalculator.ViewModel
             // Point Loading
             float PointLoadMoment = (float)Math.Round((PointLoadingLocation * PointLoadingMagnitude), 2);
 
+            float TriangularDistForce = (float).5 * TriangularDistributedLoadingMagnitude * TriangularDistributedLoadingLocation;
+            float TriangularDistForceLocation = (float)Math.Round((float)(.666666666666666666667 * TriangularDistributedLoadingLocation), 2);
+            float TrinagularMoment = TriangularDistForce * TriangularDistForceLocation;
+
+            float RectangularDistForce = RectangularDistributedLoadingMagnitude * RectangularDistributedLoadingLocation;
+            float RectangularDistForceLocation = (float).5 * RectangularDistributedLoadingLocation;
+            float RectangularMoment = TrinagularMoment;
+
             // Support Reactions
             float MFixedReaction = 0;
 
             float TotalMoment = 0;
 
-
             List<CoordPair> Result = new List<CoordPair>()
             {
-                new CoordPair { XCoord = 0, YCoord = 0 },
+                new CoordPair { XCoord = PointLoadingLocation, YCoord = PointLoadMoment },
+                new CoordPair { XCoord = TriangularDistForceLocation, YCoord = TrinagularMoment },
+                new CoordPair { XCoord = RectangularDistForceLocation, YCoord = RectangularMoment },
+                new CoordPair { XCoord = FreeMomentLocation, YCoord = FreeMomentMagnitude },
             };
+
+            CoordPair zeroPair = new CoordPair { XCoord = 0, YCoord = 0 };
+
+            Result.RemoveAll(pair => (pair.XCoord == 0 & pair.YCoord == 0));    // Removes all invalid entries that are generated on startup
+            Result.RemoveAll(pair => (pair.XCoord > LengthOfBeam));             // Removes all invalid coordinate sets where the location is greater than the length of the beam
+            if (!Result.Exists(pair => (pair.XCoord == 0 & pair.YCoord != 0)))  // Adds a coordinate pair at (0,0) if a coordinate pair a (0,something) doesn't exist
+            {
+                Result.Add(zeroPair);
+            }
+            Result.Sort(delegate (CoordPair x, CoordPair y)                     // Sorts all of the coord pairs by x coordinate so lower x coordinate pairs display first
+            {
+                return x.XCoord.CompareTo(y.XCoord);
+            });
+
+            // Finally run through the list and add the previous YCoord to the current YCoord
+            float CurYCoord = 0;
+            float PrevYCoord = 0;
+            foreach (var CoordPair in Result)
+            {
+                PrevYCoord = CurYCoord;
+                CoordPair.YCoord += PrevYCoord;
+                CurYCoord = CoordPair.YCoord;
+            }
 
             return Result;
         }
