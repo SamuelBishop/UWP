@@ -25,6 +25,9 @@ namespace InternalForcesCalculator
 
         public MainPage()
         {
+            // Register Syncfusion Liscense
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MjQ2MjU4QDMxMzgyZTMxMmUzMEhMSmM5aFBRRU9yLytMZzEwWjVMZmF6eVh3TTdZbWtsQjdUTGN4VHM0eUk9");
+
             this.InitializeComponent();
         }
 

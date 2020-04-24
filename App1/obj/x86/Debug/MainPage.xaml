@@ -148,8 +148,9 @@
 
                 </Grid>
 
-                <TextBlock x:ConnectionId='3' Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="55,0,0,0" Text="Length of Beam: 12m" TextWrapping="NoWrap" Height="60" Width="300" RenderTransformOrigin="0.486,0.466"                                               FontSize="24" />
-
+                <TextBlock x:ConnectionId='3' Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="55,0,0,-8" Text="Length of Beam:" TextWrapping="NoWrap" Height="60" Width="300" RenderTransformOrigin="0.486,0.466"                                               FontSize="24" />
+                <TextBox Text="{Binding LengthOfBeam, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="233,0,0,20" Height="30" TextWrapping="Wrap" FontSize="16" />
+                
                 <Grid Margin="700,55,55,430" Background="White" >
                     <Border BorderThickness="1" BorderBrush="Black">
                         <syncfusion:SfChart
@@ -281,6 +282,7 @@
                         </syncfusion:SfChart>
                     </Border>
                 </Grid>
+                
 
             </Grid>
 

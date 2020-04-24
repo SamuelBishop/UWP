@@ -164,6 +164,18 @@ namespace InternalForcesCalculator.ViewModel
                 OnPropertyChanged("BendingMomentData");
             }
         }
+        private float lengthOfBeam { get; set; } = 12;
+        public float LengthOfBeam
+        {
+            get { return lengthOfBeam; }
+            set
+            {
+                lengthOfBeam = value;
+                OnPropertyChanged("FixedSupportLocation");
+                OnPropertyChanged("ShearForceData");
+                OnPropertyChanged("BendingMomentData");
+            }
+        }
 
         // Setting the ShearForceData with the CreateShearForceModel function every time a binding is updated
         private List<CoordPair> shearForceData { get; set; }
@@ -180,7 +192,8 @@ namespace InternalForcesCalculator.ViewModel
                 FreeMomentMagnitude,
                 PinSupportLocation,
                 RollerSupportLocation,
-                FixedSupportLocation
+                FixedSupportLocation,
+                LengthOfBeam
                 );
             }
             set {
@@ -203,33 +216,13 @@ namespace InternalForcesCalculator.ViewModel
                 FreeMomentMagnitude,
                 PinSupportLocation,
                 RollerSupportLocation,
-                FixedSupportLocation
+                FixedSupportLocation,
+                LengthOfBeam
                 );
             }
             set {
                 bendingMomentData = value; 
             }
-        }
-
-        // Default Constructor
-        public ViewModel()
-        {
-            ShearForceData = new List<CoordPair>()
-            {
-                new CoordPair { XCoord = 0, YCoord = 7 },
-                new CoordPair { XCoord = 1, YCoord = -5 },
-                new CoordPair { XCoord = 4, YCoord = 8 },
-                new CoordPair { XCoord = 5, YCoord = 8 },
-                new CoordPair { XCoord = 0, YCoord = 0 }
-            };
-            BendingMomentData = new List<CoordPair>()
-            {
-                new CoordPair { XCoord = 0, YCoord = 0 },
-                new CoordPair { XCoord = 1, YCoord = 7 },
-                new CoordPair { XCoord = 2.5F, YCoord = 0 },
-                new CoordPair { XCoord = 4, YCoord = -8 },
-                new CoordPair { XCoord = 5, YCoord = 0 }
-            };
         }
 
         public List<CoordPair> CreateShearForceModel(
@@ -243,11 +236,11 @@ namespace InternalForcesCalculator.ViewModel
             float FreeMomentMagnitude,
             float PinSupportLocation,
             float RollerSupportLocation,
-            float FixedSupportLocation
+            float FixedSupportLocation,
+            float LengthOfBeam
             )
         {
             // Step 0: Declare variables
-            int LengthOfBeam = 12;
 
             // Distributed Loading
             float TriangularDistForce = (float).5 * TriangularDistributedLoadingMagnitude * TriangularDistributedLoadingLocation;
@@ -257,6 +250,7 @@ namespace InternalForcesCalculator.ViewModel
             float RectangularDistForceLocation = (float).5 * RectangularDistributedLoadingLocation;
 
             // Support Reactions
+            /* TODO: Not used
             float XPinReaction = 0;     // No moment reaction
             float YPinReaction = 0;
 
@@ -267,6 +261,7 @@ namespace InternalForcesCalculator.ViewModel
 
             float TotalForceX = 0;
             float TotalForceY = 0;
+            */
 
             // Step 1: Create coordinate pairs with the desired attributes for graphing later
 
@@ -302,6 +297,8 @@ namespace InternalForcesCalculator.ViewModel
                     CurYCoord = CoordPair.YCoord;
             }
 
+            
+
             return Result;
         }
 
@@ -316,52 +313,45 @@ namespace InternalForcesCalculator.ViewModel
             float FreeMomentMagnitude,
             float PinSupportLocation,
             float RollerSupportLocation,
-            float FixedSupportLocation
+            float FixedSupportLocation,
+            float LengthOfBeam
             )
         {
-            // Think of a new way to do this probably requires line graph and not area graph
-
-            // Step 0: Declare variables
-            int LengthOfBeam = 12;
-
-            // Point Loading
-            float PointLoadMoment = (float)Math.Round((PointLoadingLocation * PointLoadingMagnitude), 2);
+            
+            // Declare and initialize all complex variables
+            float PointLoadMoment = (float)Math.Round((PointLoadingLocation * PointLoadingMagnitude), 2);   // TODO: Not used
 
             float TriangularDistForce = (float).5 * TriangularDistributedLoadingMagnitude * TriangularDistributedLoadingLocation;
             float TriangularDistForceLocation = (float)Math.Round((float)(.666666666666666666667 * TriangularDistributedLoadingLocation), 2);
-            float TrinagularMoment = TriangularDistForce * TriangularDistForceLocation;
+            float TrinagularMoment = TriangularDistForce * TriangularDistForceLocation;                     // TODO: Not used
 
             float RectangularDistForce = RectangularDistributedLoadingMagnitude * RectangularDistributedLoadingLocation;
             float RectangularDistForceLocation = (float).5 * RectangularDistributedLoadingLocation;
-            float RectangularMoment = TrinagularMoment;
+            float RectangularMoment = TrinagularMoment;                                                     // TODO: Not used
 
             // Support Reactions
-            float MFixedReaction = 0;
+            float MFixedReaction = 0;   // TODO: Not used
+            float TotalMoment = 0;      // TODO: Not used
 
-            float TotalMoment = 0;
-
+            // The exact same coordinate pairs as the Shear Force Diagram
             List<CoordPair> Result = new List<CoordPair>()
             {
-                new CoordPair { XCoord = PointLoadingLocation, YCoord = PointLoadMoment },
-                new CoordPair { XCoord = TriangularDistForceLocation, YCoord = TrinagularMoment },
-                new CoordPair { XCoord = RectangularDistForceLocation, YCoord = RectangularMoment },
-                new CoordPair { XCoord = FreeMomentLocation, YCoord = FreeMomentMagnitude },
+                new CoordPair { XCoord = PointLoadingLocation, YCoord = PointLoadingMagnitude },
+                new CoordPair { XCoord = TriangularDistForceLocation, YCoord = TriangularDistForce },
+                new CoordPair { XCoord = RectangularDistForceLocation, YCoord = RectangularDistForce },
+                new CoordPair { XCoord = LengthOfBeam, YCoord = 0 }
             };
-
+                
             CoordPair zeroPair = new CoordPair { XCoord = 0, YCoord = 0 };
-
             Result.RemoveAll(pair => (pair.XCoord == 0 & pair.YCoord == 0));    // Removes all invalid entries that are generated on startup
-            Result.RemoveAll(pair => (pair.XCoord > LengthOfBeam));             // Removes all invalid coordinate sets where the location is greater than the length of the beam
-            if (!Result.Exists(pair => (pair.XCoord == 0 & pair.YCoord != 0)))  // Adds a coordinate pair at (0,0) if a coordinate pair a (0,something) doesn't exist
-            {
-                Result.Add(zeroPair);
-            }
+            Result.Insert(0, zeroPair);                                         // Sets the inital coord point on the graph ALWAYS equal to (0,0)
+
             Result.Sort(delegate (CoordPair x, CoordPair y)                     // Sorts all of the coord pairs by x coordinate so lower x coordinate pairs display first
             {
                 return x.XCoord.CompareTo(y.XCoord);
             });
 
-            // Finally run through the list and add the previous YCoord to the current YCoord
+            // Run through the list and add up the Y coordinates (Forces)
             float CurYCoord = 0;
             float PrevYCoord = 0;
             foreach (var CoordPair in Result)
@@ -369,6 +359,50 @@ namespace InternalForcesCalculator.ViewModel
                 PrevYCoord = CurYCoord;
                 CoordPair.YCoord += PrevYCoord;
                 CurYCoord = CoordPair.YCoord;
+            }
+            
+            // Shift the X Coordinates to the right by one to connect plot the right points (connect the dots)
+            for (int i = 1; i < (Result.Count - 1); i++)
+            {
+                Result[i].XCoord = Result[i + 1].XCoord;
+            }
+            Result.RemoveAt(Result.Count - 1);
+            Result[Result.Count - 1].YCoord = 0;            // * CHECK WITH THE PROFESSOR Moment diagram will always return to the zero location?
+
+            // Multiply the forces by the distances to get the moment y coordinates
+            float LastXCoord = 0;
+            for (int i = 1; i < (Result.Count - 1); i++)    // Moves the X coordinate over one to plot the right point
+            {
+                Result[i].YCoord = Result[i].YCoord * (Result[i].XCoord - LastXCoord);
+                LastXCoord = Result[i].XCoord;
+            }
+
+            // Add free moment and sort it into the moment coordinate pairs
+            CoordPair FreeMoment = new CoordPair { XCoord = FreeMomentLocation, YCoord = FreeMomentMagnitude };
+            if(FreeMoment.XCoord != 0 & FreeMoment.YCoord != 0)
+            {
+                Result.Add(FreeMoment);
+                Result.Sort(delegate (CoordPair x, CoordPair y)
+                {
+                    return x.XCoord.CompareTo(y.XCoord);
+                });
+            }
+
+            // Do one last run through of the list and sum the moments for each point
+            CurYCoord = 0;
+            PrevYCoord = 0;
+            for (int i = 1; i < (Result.Count - 1); i++)
+            {
+                PrevYCoord = CurYCoord;
+                Result[i].YCoord += PrevYCoord;
+                CurYCoord = Result[i].YCoord;
+            }
+
+            // Removes all invalid coordinate sets where the location is greater than the length of the beam
+            CoordPair RectifyEndPoint = new CoordPair { XCoord = LengthOfBeam, YCoord = 0 };
+            if (Result[Result.Count - 1].XCoord > LengthOfBeam) { 
+                Result.RemoveAll(pair => (pair.XCoord > LengthOfBeam));
+                Result[Result.Count - 1] = RectifyEndPoint;
             }
 
             return Result;

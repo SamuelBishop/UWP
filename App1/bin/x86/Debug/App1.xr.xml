@@ -3,6 +3,7 @@
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="BendingMomentData" />
     <RootPropertyPathName Name="ShearForceData" />
+    <RootPropertyPathName Name="LengthOfBeam" />
     <RootPropertyPathName Name="FixedSupportLocation" />
     <RootPropertyPathName Name="RollerSupportLocation" />
     <RootPropertyPathName Name="PinSupportLocation" />
@@ -70,6 +71,15 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootProperty Name="Background" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Text" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="FontSize" />
     </RootType>
     <RootType FullName="Syncfusion.UI.Xaml.Charts.SfChart">
       <RootProperty Name="Header" />
@@ -154,10 +164,6 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Orientation" />
       <RootProperty Name="Children" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="Text" />
-      <RootProperty Name="FontSize" />
     </RootType>
     <RootType FullName="InternalForcesCalculator.MainPage" />
   </Roots.RootTypes>
