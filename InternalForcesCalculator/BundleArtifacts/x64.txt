@@ -1,0 +1,2 @@
+MainPackage=C:\Users\sjbc3\OneDrive\Desktop\git\UWP\InternalForcesCalculator\bin\x64\Debug\InternalForcesCalculator_1.0.12.0_x64_Debug.msix
+SymbolPackage=C:\Users\sjbc3\OneDrive\Desktop\git\UWP\InternalForcesCalculator\obj\x64\Debug\Symbols\InternalForcesCalculator_1.0.12.0_x64_Debug.appxsym

@@ -1,0 +1,6 @@
+MainPackage=C:\Users\sjbc3\OneDrive\Desktop\git\UWP\InternalForcesCalculator\bin\ARM\Debug\InternalForcesCalculator_1.0.12.0_ARM_Debug.msix
+SymbolPackage=C:\Users\sjbc3\OneDrive\Desktop\git\UWP\InternalForcesCalculator\obj\ARM\Debug\Symbols\InternalForcesCalculator_1.0.12.0_ARM_Debug.appxsym
+ResourcePack=C:\Users\sjbc3\OneDrive\Desktop\git\UWP\InternalForcesCalculator\bin\ARM\Debug\InternalForcesCalculator_1.0.12.0_scale-100.msix
+ResourcePack=C:\Users\sjbc3\OneDrive\Desktop\git\UWP\InternalForcesCalculator\bin\ARM\Debug\InternalForcesCalculator_1.0.12.0_scale-125.msix
+ResourcePack=C:\Users\sjbc3\OneDrive\Desktop\git\UWP\InternalForcesCalculator\bin\ARM\Debug\InternalForcesCalculator_1.0.12.0_scale-150.msix
+ResourcePack=C:\Users\sjbc3\OneDrive\Desktop\git\UWP\InternalForcesCalculator\bin\ARM\Debug\InternalForcesCalculator_1.0.12.0_scale-400.msix

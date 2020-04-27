@@ -9,12 +9,12 @@
   <Identity
     Name="25a19b39-cb91-4538-a1e5-72f12dfff12d"
     Publisher="CN=Sam Bishop"
-    Version="1.0.0.0" />
+    Version="1.0.15.0" />
 
   <mp:PhoneIdentity PhoneProductId="25a19b39-cb91-4538-a1e5-72f12dfff12d" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>App1</DisplayName>
+    <DisplayName>Internal Forces Calculator</DisplayName>
     <PublisherDisplayName>Sam Bishop</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -37,7 +37,7 @@
         Description="An internal forces calculator created for ENGINR 1200 at Mizzou for the Spring of 2020. Professor Yaw Adu."
         BackgroundColor="transparent" Square44x44Logo="Assets\AppIconGen.png">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
-        <uap:SplashScreen Image="Assets\SplashScreenIcon.scale-200.png"  BackgroundColor="#5D9BD7"/>
+        <uap:SplashScreen Image="Assets\SplashIcon.png"  BackgroundColor="#5D9BD7"/>
       </uap:VisualElements>
     </Application>
   </Applications>
