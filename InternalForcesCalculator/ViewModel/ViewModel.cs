@@ -3,6 +3,7 @@ using Syncfusion.Olap.UWP.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using Accord.Math;
 using System.IO.Ports;
 using System.Linq;
 using System.Text;
@@ -177,6 +178,44 @@ namespace InternalForcesCalculator.ViewModel
             }
         }
 
+
+        private bool includePinSupport { get; set; } = false;
+        public bool IncludePinSupport
+        {
+            get { return includePinSupport; }
+            set
+            {
+                includePinSupport = value;
+                OnPropertyChanged("FixedSupportLocation");
+                OnPropertyChanged("ShearForceData");
+                OnPropertyChanged("BendingMomentData");
+            }
+        }
+        private bool includeRollerSupport { get; set; } = false;
+        public bool IncludeRollerSupport
+        {
+            get { return includeRollerSupport; }
+            set
+            {
+                includeRollerSupport = value;
+                OnPropertyChanged("FixedSupportLocation");
+                OnPropertyChanged("ShearForceData");
+                OnPropertyChanged("BendingMomentData");
+            }
+        }
+        private bool includeFixedSupport { get; set; } = false;
+        public bool IncludeFixedSupport
+        {
+            get { return includeFixedSupport; }
+            set
+            {
+                includeFixedSupport = value;
+                OnPropertyChanged("FixedSupportLocation");
+                OnPropertyChanged("ShearForceData");
+                OnPropertyChanged("BendingMomentData");
+            }
+        }
+
         // Setting the ShearForceData with the CreateShearForceModel function every time a binding is updated
         private List<CoordPair> shearForceData { get; set; }
         public List<CoordPair> ShearForceData
@@ -193,7 +232,10 @@ namespace InternalForcesCalculator.ViewModel
                 PinSupportLocation,
                 RollerSupportLocation,
                 FixedSupportLocation,
-                LengthOfBeam
+                LengthOfBeam,
+                IncludePinSupport,
+                IncludeRollerSupport,
+                IncludeFixedSupport
                 );
             }
             set {
@@ -217,7 +259,10 @@ namespace InternalForcesCalculator.ViewModel
                 PinSupportLocation,
                 RollerSupportLocation,
                 FixedSupportLocation,
-                LengthOfBeam
+                LengthOfBeam,
+                IncludePinSupport,
+                IncludeRollerSupport,
+                IncludeFixedSupport
                 );
             }
             set {
@@ -237,31 +282,43 @@ namespace InternalForcesCalculator.ViewModel
             float PinSupportLocation,
             float RollerSupportLocation,
             float FixedSupportLocation,
-            float LengthOfBeam
+            float LengthOfBeam,
+            bool IncludePinSupport,
+            bool IncludeRollerSupport,
+            bool IncludeFixedSupport
             )
         {
             // Step 0: Declare variables
+            float PointLoadMoment = (float)Math.Round((PointLoadingLocation * PointLoadingMagnitude), 2);   // TODO: Not used
 
             // Distributed Loading
             float TriangularDistForce = (float).5 * TriangularDistributedLoadingMagnitude * TriangularDistributedLoadingLocation;
             float TriangularDistForceLocation = (float)Math.Round((float)(.666666666666666666667 * TriangularDistributedLoadingLocation), 2);
+            float TrinagularMoment = TriangularDistForce * TriangularDistForceLocation;                     // TODO: Not used
 
             float RectangularDistForce = RectangularDistributedLoadingMagnitude * RectangularDistributedLoadingLocation;
             float RectangularDistForceLocation = (float).5 * RectangularDistributedLoadingLocation;
+            float RectangularMoment = RectangularDistForce * RectangularDistForceLocation;                  // TODO: Not used
 
-            // Support Reactions
-            /* TODO: Not used
-            float XPinReaction = 0;     // No moment reaction
-            float YPinReaction = 0;
+            // Do moment solving for one of the forces right here. Get ratio of pin force to other forces
+            int UsePinSupport = IncludePinSupport ? 1 : 0;
+            int UseRollerSupport = IncludeRollerSupport ? 1 : 0;
+            int UseFixedSupport = IncludeFixedSupport ? 1 : 0;
 
-            float YRollerReaction = 0;  // No X reaction, No moment reaction
+            float[,] matrix =
+{
+                { UsePinSupport, UseRollerSupport, UseFixedSupport }, // start as 2x2 system with ay and by and then once that is down work out a cy
+                { PinSupportLocation, RollerSupportLocation, FixedSupportLocation}
+            };
 
-            float XFixedReaction = 0;   // Might not even need X reactions
-            float YFixedReaction = 0;
+            float knownForceMag = -1 * (PointLoadingMagnitude + RectangularDistForce + TriangularDistForce);
+            float knownMomentMag = -1 * (PointLoadMoment + RectangularMoment + TrinagularMoment);
+            float[,] RightSideMoment = { { knownForceMag }, { knownMomentMag } };
+            float[,] MomentReaction = Matrix.Solve(matrix, RightSideMoment, leastSquares: true);
 
-            float TotalForceX = 0;
-            float TotalForceY = 0;
-            */
+            float YPinReaction = MomentReaction[0,0];
+            float YRollerReaction = MomentReaction[1,0];  // No X reaction, No moment reaction
+            float YFixedReaction = MomentReaction[2,0];
 
             // Step 1: Create coordinate pairs with the desired attributes for graphing later
 
@@ -271,14 +328,36 @@ namespace InternalForcesCalculator.ViewModel
                 new CoordPair { XCoord = TriangularDistForceLocation, YCoord = TriangularDistForce },
                 new CoordPair { XCoord = RectangularDistForceLocation, YCoord = RectangularDistForce },
                 new CoordPair { XCoord = LengthOfBeam, YCoord = 0 }
+
             };
+
+            CoordPair PinSupportPair = new CoordPair { XCoord = PinSupportLocation, YCoord = YPinReaction };
+            if (IncludePinSupport)
+            {
+                Result.Add(PinSupportPair);
+            }
+            CoordPair RollerSupportPair = new CoordPair { XCoord = RollerSupportLocation, YCoord = YRollerReaction };
+            if (IncludeRollerSupport)
+            {
+                Result.Add(RollerSupportPair);
+            }
+            CoordPair FixedSupportPair = new CoordPair { XCoord = FixedSupportLocation, YCoord = YFixedReaction };
+            if (IncludeFixedSupport)
+            {
+                Result.Add(FixedSupportPair);
+            }
+            //CoordPair DefaultPair = new CoordPair { XCoord = LengthOfBeam, YCoord = 0 };
+            //if (!IncludePinSupport & !IncludeRollerSupport & !IncludeFixedSupport)
+            //{
+            //    Result.Add(DefaultPair);
+            //}
 
             // Sort all of the points based off of their x coordinate (makes sure the graph is in order)
             CoordPair zeroPair = new CoordPair { XCoord = 0, YCoord = 0 };
-
+            bool NoSupportsApplied = !IncludePinSupport & !IncludeRollerSupport & !IncludeFixedSupport;
             Result.RemoveAll(pair => (pair.XCoord == 0 & pair.YCoord == 0));    // Removes all invalid entries that are generated on startup
             Result.RemoveAll(pair => (pair.XCoord > LengthOfBeam));             // Removes all invalid coordinate sets where the location is greater than the length of the beam
-            if (!Result.Exists(pair => (pair.XCoord == 0 & pair.YCoord != 0)))  // Adds a coordinate pair at (0,0) if a coordinate pair a (0,something) doesn't exist
+            if (NoSupportsApplied & !Result.Exists(pair => (pair.XCoord == 0 & pair.YCoord != 0)))  // Adds a coordinate pair at (0,0) if a coordinate pair a (0,something) doesn't exist
             {
                 Result.Add(zeroPair);
             }
@@ -297,8 +376,6 @@ namespace InternalForcesCalculator.ViewModel
                     CurYCoord = CoordPair.YCoord;
             }
 
-            
-
             return Result;
         }
 
@@ -314,7 +391,10 @@ namespace InternalForcesCalculator.ViewModel
             float PinSupportLocation,
             float RollerSupportLocation,
             float FixedSupportLocation,
-            float LengthOfBeam
+            float LengthOfBeam,
+            bool IncludePinSupport,
+            bool IncludeRollerSupport,
+            bool IncludeFixedSupport
             )
         {
             

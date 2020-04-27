@@ -111,6 +111,9 @@
                             <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor0}">
                                 <TextBlock Foreground="White" Text="Location" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged" FontSize="16"/>
                             </Border>
+                            <Border HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="60" Width="155" Background="{StaticResource ThemeColor0}">
+                                <TextBlock Foreground="White" Text="Include Support" Margin="10,0,0,0" TextWrapping="NoWrap" RenderTransformOrigin="0.486,0.466" SelectionChanged="TextBlock_SelectionChanged" FontSize="16"/>
+                            </Border>
                         </StackPanel>
 
                         <StackPanel Grid.Row="1" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" >
@@ -119,6 +122,13 @@
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
                                 <TextBox Text="{Binding PinSupportLocation, Mode=TwoWay}" FontSize="16"/>
+                            </Border>
+                            <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
+                                <CheckBox Margin="58,-25,0,0" BorderBrush="#5D9BD7"  IsChecked="{Binding IncludePinSupport, Mode=TwoWay}">
+                                    <CheckBox.RenderTransform>
+                                        <CompositeTransform ScaleX="1.7" ScaleY="1.7"/>
+                                    </CheckBox.RenderTransform>
+                                </CheckBox>
                             </Border>
                         </StackPanel>
 
@@ -129,6 +139,13 @@
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor3}">
                                 <TextBox Text="{Binding RollerSupportLocation, Mode=TwoWay}" FontSize="16"/>
                             </Border>
+                            <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
+                                <CheckBox Margin="58,-25,0,0" BorderBrush="#5D9BD7" IsChecked="{Binding IncludeRollerSupport, Mode=TwoWay}">
+                                    <CheckBox.RenderTransform>
+                                        <CompositeTransform ScaleX="1.7" ScaleY="1.7"/>
+                                    </CheckBox.RenderTransform>
+                                </CheckBox>
+                            </Border>
                         </StackPanel>
 
                         <StackPanel Grid.Row="3" Margin="0,0,0,0" VerticalAlignment="Center" Orientation="Horizontal" >
@@ -137,6 +154,13 @@
                             </Border>
                             <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
                                 <TextBox Text="{Binding FixedSupportLocation, Mode=TwoWay}" FontSize="16"/>
+                            </Border>
+                            <Border Height="60" Width="155" Margin="10,0,0,0" Background="{StaticResource ThemeColor2}">
+                                <CheckBox Margin="58,-25,0,0" BorderBrush="#5D9BD7" IsChecked="{Binding IncludeFixedSupport, Mode=TwoWay}">
+                                    <CheckBox.RenderTransform>
+                                        <CompositeTransform ScaleX="1.7" ScaleY="1.7"/>
+                                    </CheckBox.RenderTransform>
+                                </CheckBox>
                             </Border>
                         </StackPanel>
                     </Grid>
