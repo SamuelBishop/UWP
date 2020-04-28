@@ -35,7 +35,6 @@ namespace InternalForcesCalculator.ViewModel
                 OnPropertyChanged("BendingMomentData");
             }
         }
-
         private float pointLoadingMagnitude { get; set; }
         public float PointLoadingMagnitude
         {
@@ -48,7 +47,6 @@ namespace InternalForcesCalculator.ViewModel
                 OnPropertyChanged("BendingMomentData");
             }
         }
-
         private float triangularDistributedLoadingLocation { get; set; }
         public float TriangularDistributedLoadingLocation
         {
@@ -61,7 +59,6 @@ namespace InternalForcesCalculator.ViewModel
                 OnPropertyChanged("BendingMomentData");
             }
         }
-
         private float triangularDistributedLoadingMagnitude { get; set; }
         public float TriangularDistributedLoadingMagnitude
         {
@@ -74,7 +71,6 @@ namespace InternalForcesCalculator.ViewModel
                 OnPropertyChanged("BendingMomentData");
             }
         }
-
         private float rectangularDistributedLoadingLocation { get; set; }
         public float RectangularDistributedLoadingLocation
         {
@@ -87,7 +83,6 @@ namespace InternalForcesCalculator.ViewModel
                 OnPropertyChanged("BendingMomentData");
             }
         }
-
         private float rectangularDistributedLoadingMagnitude { get; set; }
         public float RectangularDistributedLoadingMagnitude
         {
@@ -100,7 +95,6 @@ namespace InternalForcesCalculator.ViewModel
                 OnPropertyChanged("BendingMomentData");
             }
         }
-
         private float freeMomentLocation { get; set; }
         public float FreeMomentLocation
         {
@@ -113,7 +107,6 @@ namespace InternalForcesCalculator.ViewModel
                 OnPropertyChanged("BendingMomentData");
             }
         }
-
         private float freeMomentMagnitude { get; set; }
         public float FreeMomentMagnitude
         {
@@ -126,7 +119,6 @@ namespace InternalForcesCalculator.ViewModel
                 OnPropertyChanged("BendingMomentData");
             }
         }
-
         private float pinSupportLocation { get; set; }
         public float PinSupportLocation
         {
@@ -139,7 +131,6 @@ namespace InternalForcesCalculator.ViewModel
                 OnPropertyChanged("BendingMomentData");
             }
         }
-
         private float rollerSupportLocation { get; set; }
         public float RollerSupportLocation
         {
@@ -152,7 +143,6 @@ namespace InternalForcesCalculator.ViewModel
                 OnPropertyChanged("BendingMomentData");
             }
         }
-
         private float fixedSupportLocation { get; set; }
         public float FixedSupportLocation
         {
@@ -177,8 +167,6 @@ namespace InternalForcesCalculator.ViewModel
                 OnPropertyChanged("BendingMomentData");
             }
         }
-
-
         private bool includePinSupport { get; set; } = false;
         public bool IncludePinSupport
         {
@@ -346,11 +334,6 @@ namespace InternalForcesCalculator.ViewModel
             {
                 Result.Add(FixedSupportPair);
             }
-            //CoordPair DefaultPair = new CoordPair { XCoord = LengthOfBeam, YCoord = 0 };
-            //if (!IncludePinSupport & !IncludeRollerSupport & !IncludeFixedSupport)
-            //{
-            //    Result.Add(DefaultPair);
-            //}
 
             // Sort all of the points based off of their x coordinate (makes sure the graph is in order)
             CoordPair zeroPair = new CoordPair { XCoord = 0, YCoord = 0 };
