@@ -289,16 +289,16 @@ namespace InternalForcesCalculator.ViewModel
             )
         {
             // Step 0: Declare variables
-            float PointLoadMoment = (float)Math.Round((PointLoadingLocation * PointLoadingMagnitude), 2);   // TODO: Not used
+            float PointLoadMoment = (float)Math.Round((PointLoadingLocation * PointLoadingMagnitude), 2);
 
             // Distributed Loading
             float TriangularDistForce = (float).5 * TriangularDistributedLoadingMagnitude * TriangularDistributedLoadingLocation;
             float TriangularDistForceLocation = (float)Math.Round((float)(.666666666666666666667 * TriangularDistributedLoadingLocation), 2);
-            float TrinagularMoment = TriangularDistForce * TriangularDistForceLocation;                     // TODO: Not used
+            float TrinagularMoment = TriangularDistForce * TriangularDistForceLocation;
 
             float RectangularDistForce = RectangularDistributedLoadingMagnitude * RectangularDistributedLoadingLocation;
             float RectangularDistForceLocation = (float).5 * RectangularDistributedLoadingLocation;
-            float RectangularMoment = RectangularDistForce * RectangularDistForceLocation;                  // TODO: Not used
+            float RectangularMoment = RectangularDistForce * RectangularDistForceLocation;
 
             // Do moment solving for one of the forces right here. Get ratio of pin force to other forces
             int UsePinSupport = IncludePinSupport ? 1 : 0;
@@ -306,8 +306,8 @@ namespace InternalForcesCalculator.ViewModel
             int UseFixedSupport = IncludeFixedSupport ? 1 : 0;
 
             float[,] matrix =
-{
-                { UsePinSupport, UseRollerSupport, UseFixedSupport }, // start as 2x2 system with ay and by and then once that is down work out a cy
+            {
+                { UsePinSupport, UseRollerSupport, UseFixedSupport },
                 { PinSupportLocation, RollerSupportLocation, FixedSupportLocation}
             };
 
@@ -399,19 +399,36 @@ namespace InternalForcesCalculator.ViewModel
         {
             
             // Declare and initialize all complex variables
-            float PointLoadMoment = (float)Math.Round((PointLoadingLocation * PointLoadingMagnitude), 2);   // TODO: Not used
+            float PointLoadMoment = (float)Math.Round((PointLoadingLocation * PointLoadingMagnitude), 2);
 
             float TriangularDistForce = (float).5 * TriangularDistributedLoadingMagnitude * TriangularDistributedLoadingLocation;
             float TriangularDistForceLocation = (float)Math.Round((float)(.666666666666666666667 * TriangularDistributedLoadingLocation), 2);
-            float TrinagularMoment = TriangularDistForce * TriangularDistForceLocation;                     // TODO: Not used
+            float TrinagularMoment = TriangularDistForce * TriangularDistForceLocation;
 
             float RectangularDistForce = RectangularDistributedLoadingMagnitude * RectangularDistributedLoadingLocation;
             float RectangularDistForceLocation = (float).5 * RectangularDistributedLoadingLocation;
-            float RectangularMoment = TrinagularMoment;                                                     // TODO: Not used
+            float RectangularMoment = RectangularDistForce * RectangularDistForceLocation;
 
             // Support Reactions
-            float MFixedReaction = 0;   // TODO: Not used
-            float TotalMoment = 0;      // TODO: Not used
+            // Do moment solving for one of the forces right here. Get ratio of pin force to other forces
+            int UsePinSupport = IncludePinSupport ? 1 : 0;
+            int UseRollerSupport = IncludeRollerSupport ? 1 : 0;
+            int UseFixedSupport = IncludeFixedSupport ? 1 : 0;
+
+            float[,] matrix =
+            {
+                { UsePinSupport, UseRollerSupport, UseFixedSupport },
+                { PinSupportLocation, RollerSupportLocation, FixedSupportLocation}
+            };
+
+            float knownForceMag = -1 * (PointLoadingMagnitude + RectangularDistForce + TriangularDistForce);
+            float knownMomentMag = -1 * (PointLoadMoment + RectangularMoment + TrinagularMoment);
+            float[,] RightSideMoment = { { knownForceMag }, { knownMomentMag } };
+            float[,] MomentReaction = Matrix.Solve(matrix, RightSideMoment, leastSquares: true);
+
+            float YPinReaction = MomentReaction[0, 0];
+            float YRollerReaction = MomentReaction[1, 0];  // No X reaction, No moment reaction
+            float YFixedReaction = MomentReaction[2, 0];
 
             // The exact same coordinate pairs as the Shear Force Diagram
             List<CoordPair> Result = new List<CoordPair>()
@@ -421,7 +438,23 @@ namespace InternalForcesCalculator.ViewModel
                 new CoordPair { XCoord = RectangularDistForceLocation, YCoord = RectangularDistForce },
                 new CoordPair { XCoord = LengthOfBeam, YCoord = 0 }
             };
-                
+
+            CoordPair PinSupportPair = new CoordPair { XCoord = PinSupportLocation, YCoord = YPinReaction };
+            if (IncludePinSupport)
+            {
+                Result.Add(PinSupportPair);
+            }
+            CoordPair RollerSupportPair = new CoordPair { XCoord = RollerSupportLocation, YCoord = YRollerReaction };
+            if (IncludeRollerSupport)
+            {
+                Result.Add(RollerSupportPair);
+            }
+            CoordPair FixedSupportPair = new CoordPair { XCoord = FixedSupportLocation, YCoord = YFixedReaction };
+            if (IncludeFixedSupport)
+            {
+                Result.Add(FixedSupportPair);
+            }
+
             CoordPair zeroPair = new CoordPair { XCoord = 0, YCoord = 0 };
             Result.RemoveAll(pair => (pair.XCoord == 0 & pair.YCoord == 0));    // Removes all invalid entries that are generated on startup
             Result.Insert(0, zeroPair);                                         // Sets the inital coord point on the graph ALWAYS equal to (0,0)
