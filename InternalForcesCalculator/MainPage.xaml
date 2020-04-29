@@ -225,13 +225,13 @@
                                     />
                             </syncfusion:SfChart.SecondaryAxis>
 
-                            <syncfusion:StepAreaSeries>
-                                <syncfusion:StepAreaSeries.AdornmentsInfo>
+                            <syncfusion:AreaSeries>
+                                <syncfusion:AreaSeries.AdornmentsInfo>
                                     <syncfusion:ChartAdornmentInfo ShowLabel="True" LabelPosition="Auto"/>
-                                </syncfusion:StepAreaSeries.AdornmentsInfo>
-                            </syncfusion:StepAreaSeries>
+                                </syncfusion:AreaSeries.AdornmentsInfo>
+                            </syncfusion:AreaSeries>
 
-                            <syncfusion:StepAreaSeries Name="SFD" ShowTooltip="True" Interior="#5D9BD7" Label="Bending Moment Diagram" ItemsSource="{Binding ShearForceData}" XBindingPath="XCoord" YBindingPath="YCoord" />
+                            <syncfusion:AreaSeries Name="SFD" ShowTooltip="True" Interior="#5D9BD7" Label="Bending Moment Diagram" ItemsSource="{Binding ShearForceData}" XBindingPath="XCoord" YBindingPath="YCoord" />
 
                         </syncfusion:SfChart>
                     </Border>
