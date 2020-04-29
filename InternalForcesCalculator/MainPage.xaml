@@ -200,7 +200,7 @@
                             </syncfusion:SfChart.Resources>
 
                             <syncfusion:SfChart.PrimaryAxis>
-                                <syncfusion:CategoryAxis 
+                                <syncfusion:NumericalAxis 
                                     Header="Distance (M)" 
                                     FontSize="14" 
                                     Foreground="Black"
@@ -265,7 +265,7 @@
                             </syncfusion:SfChart.Resources>
 
                             <syncfusion:SfChart.PrimaryAxis>
-                                <syncfusion:CategoryAxis 
+                                <syncfusion:NumericalAxis
                                     Header="Distance (M)" 
                                     FontSize="14"
                                     Foreground="Black"
