@@ -315,9 +315,14 @@ namespace InternalForcesCalculator.ViewModel
                 new CoordPair { XCoord = PointLoadingLocation, YCoord = PointLoadingMagnitude },
                 new CoordPair { XCoord = TriangularDistForceLocation, YCoord = TriangularDistForce },
                 new CoordPair { XCoord = RectangularDistForceLocation, YCoord = RectangularDistForce },
-                new CoordPair { XCoord = LengthOfBeam, YCoord = 0 }
-
             };
+
+            bool NoSupportsApplied = !IncludePinSupport & !IncludeRollerSupport & !IncludeFixedSupport;
+            CoordPair endPair = new CoordPair { XCoord = LengthOfBeam, YCoord = 0 };
+            if ((NoSupportsApplied & !(pointLoadingLocation == lengthOfBeam || TriangularDistForceLocation == lengthOfBeam || RectangularDistForceLocation == lengthOfBeam)) || (!NoSupportsApplied & (pinSupportLocation != lengthOfBeam & rollerSupportLocation != lengthOfBeam & fixedSupportLocation != lengthOfBeam)))
+            {
+                Result.Add(endPair);
+            }
 
             CoordPair PinSupportPair = new CoordPair { XCoord = PinSupportLocation, YCoord = YPinReaction };
             if (IncludePinSupport)
@@ -335,14 +340,12 @@ namespace InternalForcesCalculator.ViewModel
                 Result.Add(FixedSupportPair);
             }
 
-            // Sort all of the points based off of their x coordinate (makes sure the graph is in order)
             CoordPair zeroPair = new CoordPair { XCoord = 0, YCoord = 0 };
-            bool NoSupportsApplied = !IncludePinSupport & !IncludeRollerSupport & !IncludeFixedSupport;
             Result.RemoveAll(pair => (pair.XCoord == 0 & pair.YCoord == 0));    // Removes all invalid entries that are generated on startup
             Result.RemoveAll(pair => (pair.XCoord > LengthOfBeam));             // Removes all invalid coordinate sets where the location is greater than the length of the beam
-            if (NoSupportsApplied & !Result.Exists(pair => (pair.XCoord == 0 & pair.YCoord != 0)))  // Adds a coordinate pair at (0,0) if a coordinate pair a (0,something) doesn't exist
+            if (NoSupportsApplied & !Result.Exists(pair => (pair.XCoord == 0 & pair.YCoord != 0)))
             {
-                Result.Add(zeroPair);
+                Result.Insert(0, zeroPair);                                         // Sets the inital coord point on the graph ALWAYS equal to (0,0)
             }
             Result.Sort(delegate (CoordPair x, CoordPair y)                     // Sorts all of the coord pairs by x coordinate so lower x coordinate pairs display first
             {
@@ -438,10 +441,6 @@ namespace InternalForcesCalculator.ViewModel
                 Result.Add(FixedSupportPair);
             }
 
-            CoordPair zeroPair = new CoordPair { XCoord = 0, YCoord = 0 };
-            Result.RemoveAll(pair => (pair.XCoord == 0 & pair.YCoord == 0));    // Removes all invalid entries that are generated on startup
-            Result.Insert(0, zeroPair);                                         // Sets the inital coord point on the graph ALWAYS equal to (0,0)
-
             Result.Sort(delegate (CoordPair x, CoordPair y)                     // Sorts all of the coord pairs by x coordinate so lower x coordinate pairs display first
             {
                 return x.XCoord.CompareTo(y.XCoord);
@@ -456,7 +455,19 @@ namespace InternalForcesCalculator.ViewModel
                 CoordPair.YCoord += PrevYCoord;
                 CurYCoord = CoordPair.YCoord;
             }
-            
+
+            CoordPair zeroPair = new CoordPair { XCoord = 0, YCoord = 0 };
+            CoordPair FreeMoment = new CoordPair { XCoord = FreeMomentLocation, YCoord = FreeMomentMagnitude };
+            Result.RemoveAll(pair => (pair.XCoord == 0 & pair.YCoord == 0));    // Removes all invalid entries that are generated on startup
+            if (freeMomentLocation != 0)
+            {
+                Result.Insert(0, zeroPair);                                         // Sets the inital coord point on the graph ALWAYS equal to (0,0)
+            }
+            else
+            {
+                Result.Insert(0, FreeMoment);
+            }
+
             // Shift the X Coordinates to the right by one to connect plot the right points (connect the dots)
             for (int i = 1; i < (Result.Count - 1); i++)
             {
@@ -474,8 +485,7 @@ namespace InternalForcesCalculator.ViewModel
             }
 
             // Add free moment and sort it into the moment coordinate pairs
-            CoordPair FreeMoment = new CoordPair { XCoord = FreeMomentLocation, YCoord = FreeMomentMagnitude };
-            if(FreeMoment.XCoord != 0 & FreeMoment.YCoord != 0)
+            if (FreeMoment.XCoord != 0 & FreeMoment.YCoord != 0)
             {
                 Result.Add(FreeMoment);
                 Result.Sort(delegate (CoordPair x, CoordPair y)
@@ -487,7 +497,7 @@ namespace InternalForcesCalculator.ViewModel
             // Do one last run through of the list and sum the moments for each point
             CurYCoord = 0;
             PrevYCoord = 0;
-            for (int i = 1; i < (Result.Count - 1); i++)
+            for (int i = 0; i < (Result.Count - 1); i++)
             {
                 PrevYCoord = CurYCoord;
                 Result[i].YCoord += PrevYCoord;
