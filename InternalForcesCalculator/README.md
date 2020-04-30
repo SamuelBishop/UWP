@@ -72,9 +72,3 @@ public List<CoordPair> BendingMomentData
 ```
 
 After the problem is defined, the program will automatically invoke the CreateShearForceModel and CreateBendingMomentModel functions and plot the Beam's correcsponding load diagrams.
-
-Example Figures:
-
-![Example1](/Assets/FinalExample2.png?raw=true)
-
-![Example2](/Assets/FinalExample3.png?raw=true)
