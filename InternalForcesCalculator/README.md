@@ -75,6 +75,6 @@ After the problem is defined, the program will automatically invoke the CreateSh
 
 Example Figures:
 
-![Example1](https://github.com/SamuelBishop/UWP/tree/master/InternalForcesCalculator/Assets/FinalExample2.png?raw=true)
+![Example1](/Assets/FinalExample2.png?raw=true)
 
-![Example2](https://github.com/SamuelBishop/UWP/tree/master/InternalForcesCalculator/Assets/FinalExample3.png?raw=true)
+![Example2](/Assets/FinalExample3.png?raw=true)
