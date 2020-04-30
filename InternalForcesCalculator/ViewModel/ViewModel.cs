@@ -308,58 +308,162 @@ namespace InternalForcesCalculator.ViewModel
             float YRollerReaction = MomentReaction[1,0];  // No X reaction, No moment reaction
             float YFixedReaction = MomentReaction[2,0];
 
-            // Step 1: Create coordinate pairs with the desired attributes for graphing later
-
-            List<CoordPair> Result = new List<CoordPair>()
+            // Add point loads on every .1 interval
+            float interval = .1f;
+            float tempXCoord = 0;
+            float tempYCoord = 0;
+            bool prePointCoordAdded = false;
+            List<CoordPair> PointSet = new List<CoordPair>();
+            for (float i = 0; i <= lengthOfBeam; i += interval)
             {
-                new CoordPair { XCoord = PointLoadingLocation, YCoord = PointLoadingMagnitude },
-                new CoordPair { XCoord = TriangularDistForceLocation, YCoord = TriangularDistForce },
-                new CoordPair { XCoord = RectangularDistForceLocation, YCoord = RectangularDistForce },
-            };
-
-            bool NoSupportsApplied = !IncludePinSupport & !IncludeRollerSupport & !IncludeFixedSupport;
-            CoordPair endPair = new CoordPair { XCoord = LengthOfBeam, YCoord = 0 };
-            if ((NoSupportsApplied & !(pointLoadingLocation == lengthOfBeam || TriangularDistForceLocation == lengthOfBeam || RectangularDistForceLocation == lengthOfBeam)) || (!NoSupportsApplied & (pinSupportLocation != lengthOfBeam & rollerSupportLocation != lengthOfBeam & fixedSupportLocation != lengthOfBeam)))
-            {
-                Result.Add(endPair);
+                if (i >= PointLoadingLocation)
+                {
+                    if (!prePointCoordAdded)
+                    {
+                        PointSet.Add(new CoordPair { XCoord = tempXCoord - .001f, YCoord = 0 });
+                        prePointCoordAdded = true;
+                    }
+                    tempYCoord = PointLoadingMagnitude;
+                }
+                PointSet.Add(new CoordPair { XCoord = tempXCoord, YCoord = tempYCoord });
+                tempXCoord += interval;
             }
 
-            CoordPair PinSupportPair = new CoordPair { XCoord = PinSupportLocation, YCoord = YPinReaction };
+            // Add tri force points every .1 on the interval
+            tempXCoord = 0;
+            tempYCoord = 0;
+            bool postTriangleCoordAdded = false;
+            List<CoordPair> TriangularSet = new List<CoordPair>();
+            for (float i = 0; i <= lengthOfBeam; i += interval)
+            {
+                tempYCoord = .5f * i * TriangularDistributedLoadingMagnitude;
+                if (i > TriangularDistributedLoadingLocation)
+                {
+                    if (!postTriangleCoordAdded)
+                    {
+                        TriangularSet.Add(new CoordPair { XCoord = TriangularSet[TriangularSet.Count - 1].XCoord + .001f, YCoord = 0 });
+                        postTriangleCoordAdded = true;
+                    }
+                    TriangularSet.Add(new CoordPair { XCoord = tempXCoord, YCoord = 0 });
+                }
+                else
+                {
+                    TriangularSet.Add(new CoordPair { XCoord = tempXCoord, YCoord = tempYCoord });
+                }
+                tempXCoord += interval;
+            }
+
+            // Add Rect force points every .1 on the interval
+            List<CoordPair> RectangularSet = new List<CoordPair>();
+            tempXCoord = 0;
+            tempYCoord = 0;
+            bool postRectangleCoordAdded = false;
+            for (float i = 0; i <= lengthOfBeam; i += interval)
+            {
+                tempYCoord = i * RectangularDistributedLoadingMagnitude;
+                if (i > RectangularDistributedLoadingLocation)
+                {
+                    if (!postRectangleCoordAdded)
+                    {
+                        RectangularSet.Add(new CoordPair { XCoord = RectangularSet[RectangularSet.Count - 1].XCoord + .001f, YCoord = 0 });
+                        postRectangleCoordAdded = true;
+                    }
+                    RectangularSet.Add(new CoordPair { XCoord = tempXCoord, YCoord = 0 });
+                }
+                else
+                {
+                    RectangularSet.Add(new CoordPair { XCoord = tempXCoord, YCoord = tempYCoord });
+                }
+                tempXCoord += interval;
+            }
+
+            List<CoordPair> PinSupportSet = new List<CoordPair>();
+            tempXCoord = 0;
+            tempYCoord = 0;
+            bool prePinSupportAdded = false;
             if (IncludePinSupport)
             {
-                Result.Add(PinSupportPair);
+                for (float i = 0; i <= lengthOfBeam; i += interval)
+                {
+                    if (i >= PinSupportLocation)
+                    {
+                        if (!prePinSupportAdded)
+                        {
+                            PinSupportSet.Add(new CoordPair { XCoord = tempXCoord - .001f, YCoord = 0 });
+                            prePinSupportAdded = true;
+                        }
+                        tempYCoord = YPinReaction;
+                    }
+                    PinSupportSet.Add(new CoordPair { XCoord = tempXCoord, YCoord = tempYCoord });
+                    tempXCoord += interval;
+                }
             }
-            CoordPair RollerSupportPair = new CoordPair { XCoord = RollerSupportLocation, YCoord = YRollerReaction };
+
+
+            List<CoordPair> RollerSupportSet = new List<CoordPair>();
+            tempXCoord = 0;
+            tempYCoord = 0;
+            bool preRollerSupportAdded = false;
             if (IncludeRollerSupport)
             {
-                Result.Add(RollerSupportPair);
+                for (float i = 0; i <= lengthOfBeam; i += interval)
+                {
+                    if (i >= RollerSupportLocation)
+                    {
+                        if (!preRollerSupportAdded)
+                        {
+                            RollerSupportSet.Add(new CoordPair { XCoord = tempXCoord - .001f, YCoord = 0 });
+                            preRollerSupportAdded = true;
+                        }
+                        tempYCoord = YRollerReaction;
+                    }
+                    RollerSupportSet.Add(new CoordPair { XCoord = tempXCoord, YCoord = tempYCoord });
+                    tempXCoord += interval;
+                }
             }
-            CoordPair FixedSupportPair = new CoordPair { XCoord = FixedSupportLocation, YCoord = YFixedReaction };
+
+            List<CoordPair> FixedSupportSet = new List<CoordPair>();
+            tempXCoord = 0;
+            tempYCoord = 0;
+            bool preFixedSupportAdded = false;
             if (IncludeFixedSupport)
             {
-                Result.Add(FixedSupportPair);
+                for (float i = 0; i <= lengthOfBeam; i += interval)
+                {
+                    if (i >= FixedSupportLocation)
+                    {
+                        if (!preFixedSupportAdded)
+                        {
+                            FixedSupportSet.Add(new CoordPair { XCoord = tempXCoord - .001f, YCoord = 0 });
+                            preFixedSupportAdded = true;
+                        }
+                        tempYCoord = YFixedReaction;
+                    }
+                    FixedSupportSet.Add(new CoordPair { XCoord = tempXCoord, YCoord = tempYCoord });
+                    tempXCoord += interval;
+                }
             }
 
-            CoordPair zeroPair = new CoordPair { XCoord = 0, YCoord = 0 };
-            Result.RemoveAll(pair => (pair.XCoord == 0 & pair.YCoord == 0));    // Removes all invalid entries that are generated on startup
-            Result.RemoveAll(pair => (pair.XCoord > LengthOfBeam));             // Removes all invalid coordinate sets where the location is greater than the length of the beam
-            if (NoSupportsApplied & !Result.Exists(pair => (pair.XCoord == 0 & pair.YCoord != 0)))
+            List<CoordPair> Result = new List<CoordPair>();
+            for( int i = 0; i < TriangularSet.Count - 1; i++ )
             {
-                Result.Insert(0, zeroPair);                                         // Sets the inital coord point on the graph ALWAYS equal to (0,0)
+                Result.Add(new CoordPair { XCoord = RectangularSet[i].XCoord, YCoord = TriangularSet[i].YCoord + RectangularSet[i].YCoord + PointSet[i].YCoord});
             }
-            Result.Sort(delegate (CoordPair x, CoordPair y)                     // Sorts all of the coord pairs by x coordinate so lower x coordinate pairs display first
-            {
-                return x.XCoord.CompareTo(y.XCoord);
-            });
 
-            // Finally run through the list and add the previous YCoord to the current YCoord
-            float CurYCoord = 0;
-            float PrevYCoord = 0;
-            foreach (var CoordPair in Result)
+            for (int i = 0; i < TriangularSet.Count - 1; i++)
             {
-                    PrevYCoord = CurYCoord;
-                    CoordPair.YCoord += PrevYCoord;
-                    CurYCoord = CoordPair.YCoord;
+                if (IncludePinSupport)
+                {
+                    Result[i].YCoord += PinSupportSet[i].YCoord;
+                }
+                if (IncludeRollerSupport)
+                {
+                    Result[i].YCoord += RollerSupportSet[i].YCoord;
+                }
+                if (IncludeFixedSupport)
+                {
+                    Result[i].YCoord += FixedSupportSet[i].YCoord;
+                }
             }
 
             return Result;
