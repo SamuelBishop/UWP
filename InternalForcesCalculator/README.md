@@ -15,7 +15,7 @@ The user interface is contained within the `MainPage.xaml` file and depends on t
 <syncfusion:AreaSeries Name="BMD" ShowTooltip="True" Interior="#5D9BD7" Label="Bending Moment Diagram" ItemsSource="{Binding BendingMomentData}" XBindingPath="XCoord" YBindingPath="YCoord" /> // Bindings for the Bending Moment Diagram
 ```
 
-Generation of data is located within the 'ViewModel.cs' file. The variables `ShearForceData` and `BendingMomentData` are set by the functions `CreateShearForceModel` and `CreateBendingMomentModel` respectively.
+Generation of data is located within the `ViewModel.cs` file. The variables `ShearForceData` and `BendingMomentData` are set by the functions `CreateShearForceModel` and `CreateBendingMomentModel` respectively.
 
 ```c#
 private List<CoordPair> shearForceData { get; set; }
