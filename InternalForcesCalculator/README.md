@@ -74,6 +74,7 @@ public List<CoordPair> BendingMomentData
 After the problem is defined, the program will automatically invoke the CreateShearForceModel and CreateBendingMomentModel functions and plot the Beam's correcsponding load diagrams.
 
 Example Figures:
-![Example1](https://github.com/SamuelBishop/UWP/tree/master/InternalForcesCalculator/Assets/FinalExample2.png)
 
-![Example2](https://github.com/SamuelBishop/UWP/tree/master/InternalForcesCalculator/Assets/FinalExample3.png)
+![Example1](https://github.com/SamuelBishop/UWP/tree/master/InternalForcesCalculator/Assets/FinalExample2.png?raw=true)
+
+![Example2](https://github.com/SamuelBishop/UWP/tree/master/InternalForcesCalculator/Assets/FinalExample3.png?raw=true)
